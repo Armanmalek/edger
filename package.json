@@ -1,0 +1,37 @@
+{
+  "name": "edges",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run generate:data && next dev",
+    "build": "npm run generate:data && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate:data": "node --import tsx scripts/generate-game-data.ts",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "npm run generate:data && vitest run",
+    "test:e2e": "npm run build && node --import tsx scripts/run-playwright.ts"
+  },
+  "dependencies": {
+    "framer-motion": "^12.10.5",
+    "next": "^14.2.28",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-simple-maps": "^3.0.0",
+    "world-countries": "^5.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^22.14.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitest/coverage-v8": "^3.1.1",
+    "jsdom": "^26.0.0",
+    "playwright": "^1.51.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  }
+}

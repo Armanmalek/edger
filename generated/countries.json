@@ -1,0 +1,5695 @@
+[
+  {
+    "iso3": "AFG",
+    "name": "Afghanistan",
+    "aliases": [
+      "AF",
+      "Afġānistān",
+      "Islamic Republic of Afghanistan"
+    ],
+    "neighbors": [
+      "CHN",
+      "IRN",
+      "PAK",
+      "TJK",
+      "TKM",
+      "UZB"
+    ],
+    "bbox": [
+      60.504166,
+      29.406105,
+      74.915741,
+      38.472115
+    ],
+    "centroid": [
+      65,
+      33
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "ALB",
+    "name": "Albania",
+    "aliases": [
+      "AL",
+      "Republic of Albania",
+      "Shqipëri",
+      "Shqipëria",
+      "Shqipnia"
+    ],
+    "neighbors": [
+      "GRC",
+      "MKD",
+      "MNE"
+    ],
+    "bbox": [
+      19.282497,
+      39.644722,
+      21.054165,
+      42.661942
+    ],
+    "centroid": [
+      20,
+      41
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "DZA",
+    "name": "Algeria",
+    "aliases": [
+      "Algérie",
+      "DZ",
+      "Dzayer",
+      "People's Democratic Republic of Algeria"
+    ],
+    "neighbors": [
+      "LBY",
+      "MAR",
+      "MLI",
+      "MRT",
+      "NER",
+      "TUN"
+    ],
+    "bbox": [
+      -8.667223,
+      18.976387,
+      11.986475,
+      37.091385
+    ],
+    "centroid": [
+      3,
+      28
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Northern Africa"
+  },
+  {
+    "iso3": "AND",
+    "name": "Andorra",
+    "aliases": [
+      "AD",
+      "Principality of Andorra",
+      "Principat d'Andorra"
+    ],
+    "neighbors": [
+      "ESP",
+      "FRA"
+    ],
+    "bbox": [
+      1.421389,
+      42.436104,
+      1.78172,
+      42.656387
+    ],
+    "centroid": [
+      1.5,
+      42.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "AGO",
+    "name": "Angola",
+    "aliases": [
+      "AO",
+      "Republic of Angola",
+      "República de Angola",
+      "ʁɛpublika de an'ɡɔla"
+    ],
+    "neighbors": [
+      "COD",
+      "COG",
+      "NAM",
+      "ZMB"
+    ],
+    "bbox": [
+      11.663332,
+      -18.016392,
+      24.084442,
+      -4.38899
+    ],
+    "centroid": [
+      18.5,
+      -12.5
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "ATG",
+    "name": "Antigua and Barbuda",
+    "aliases": [
+      "AG"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -61.89111,
+      16.989719,
+      -61.66639,
+      17.724998
+    ],
+    "centroid": [
+      -61.8,
+      17.05
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "ARG",
+    "name": "Argentina",
+    "aliases": [
+      "AR",
+      "Argentine Republic",
+      "República Argentina"
+    ],
+    "neighbors": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "PRY",
+      "URY"
+    ],
+    "bbox": [
+      -73.58362,
+      -55.051674,
+      -53.64973,
+      -21.78052
+    ],
+    "centroid": [
+      -64,
+      -34
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "ARM",
+    "name": "Armenia",
+    "aliases": [
+      "AM",
+      "Hayastan",
+      "Republic of Armenia",
+      "Հայաստանի Հանրապետություն"
+    ],
+    "neighbors": [
+      "AZE",
+      "GEO",
+      "IRN",
+      "TUR"
+    ],
+    "bbox": [
+      43.453888,
+      38.84115,
+      46.62249,
+      41.29705
+    ],
+    "centroid": [
+      45,
+      40
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "AUS",
+    "name": "Australia",
+    "aliases": [
+      "AU",
+      "Commonwealth of Australia"
+    ],
+    "neighbors": [],
+    "bbox": [
+      112.907211,
+      -54.753891,
+      159.101898,
+      -10.05139
+    ],
+    "centroid": [
+      133,
+      -27
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand"
+  },
+  {
+    "iso3": "AUT",
+    "name": "Austria",
+    "aliases": [
+      "AT",
+      "Oesterreich",
+      "Osterreich",
+      "Republic of Austria"
+    ],
+    "neighbors": [
+      "CHE",
+      "CZE",
+      "DEU",
+      "HUN",
+      "ITA",
+      "LIE",
+      "SVK",
+      "SVN"
+    ],
+    "bbox": [
+      9.533569,
+      46.407494,
+      17.166386,
+      49.018883
+    ],
+    "centroid": [
+      13.33333333,
+      47.33333333
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 8,
+    "region": "Europe",
+    "subregion": "Central Europe"
+  },
+  {
+    "iso3": "AZE",
+    "name": "Azerbaijan",
+    "aliases": [
+      "AZ",
+      "Azərbaycan Respublikası",
+      "Republic of Azerbaijan"
+    ],
+    "neighbors": [
+      "ARM",
+      "GEO",
+      "IRN",
+      "RUS",
+      "TUR"
+    ],
+    "bbox": [
+      44.778862,
+      38.389153,
+      50.37499,
+      41.897057
+    ],
+    "centroid": [
+      47.5,
+      40.5
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "BHS",
+    "name": "Bahamas",
+    "aliases": [
+      "BS",
+      "Commonwealth of the Bahamas"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -78.9789,
+      20.915276,
+      -72.737503,
+      26.929165
+    ],
+    "centroid": [
+      -76,
+      24.25
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "BHR",
+    "name": "Bahrain",
+    "aliases": [
+      "BH",
+      "Kingdom of Bahrain",
+      "Mamlakat al-Baḥrayn"
+    ],
+    "neighbors": [],
+    "bbox": [
+      50.453049,
+      25.571941,
+      50.822495,
+      26.288887
+    ],
+    "centroid": [
+      50.55,
+      26
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "BGD",
+    "name": "Bangladesh",
+    "aliases": [
+      "BD",
+      "Gônôprôjatôntri Bangladesh",
+      "People's Republic of Bangladesh"
+    ],
+    "neighbors": [
+      "IND",
+      "MMR"
+    ],
+    "bbox": [
+      88.04332,
+      20.73805,
+      92.669342,
+      26.631939
+    ],
+    "centroid": [
+      90,
+      24
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "BRB",
+    "name": "Barbados",
+    "aliases": [
+      "BB"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -59.659447,
+      13.050554,
+      -59.426949,
+      13.337221
+    ],
+    "centroid": [
+      -59.53333333,
+      13.16666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "BLR",
+    "name": "Belarus",
+    "aliases": [
+      "Bielaruś",
+      "BY",
+      "Republic of Belarus",
+      "Белоруссия",
+      "Республика Белоруссия"
+    ],
+    "neighbors": [
+      "LTU",
+      "LVA",
+      "POL",
+      "RUS",
+      "UKR"
+    ],
+    "bbox": [
+      23.1654,
+      51.251846,
+      32.741379,
+      56.16777
+    ],
+    "centroid": [
+      28,
+      53
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Eastern Europe"
+  },
+  {
+    "iso3": "BEL",
+    "name": "Belgium",
+    "aliases": [
+      "BE",
+      "Belgie",
+      "België",
+      "Belgien",
+      "Belgique",
+      "Kingdom of Belgium",
+      "Königreich Belgien",
+      "Koninkrijk België",
+      "Royaume de Belgique"
+    ],
+    "neighbors": [
+      "DEU",
+      "FRA",
+      "LUX",
+      "NLD"
+    ],
+    "bbox": [
+      2.541667,
+      49.504166,
+      6.398204,
+      51.503609
+    ],
+    "centroid": [
+      4,
+      50.83333333
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "BLZ",
+    "name": "Belize",
+    "aliases": [
+      "BZ"
+    ],
+    "neighbors": [
+      "GTM",
+      "MEX"
+    ],
+    "bbox": [
+      -89.2164,
+      15.889851,
+      -87.7789,
+      18.489902
+    ],
+    "centroid": [
+      -88.75,
+      17.25
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "BEN",
+    "name": "Benin",
+    "aliases": [
+      "BJ",
+      "Republic of Benin",
+      "République du Bénin"
+    ],
+    "neighbors": [
+      "BFA",
+      "NER",
+      "NGA",
+      "TGO"
+    ],
+    "bbox": [
+      0.776667,
+      6.218721,
+      3.855,
+      12.396658
+    ],
+    "centroid": [
+      2.25,
+      9.5
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "BTN",
+    "name": "Bhutan",
+    "aliases": [
+      "BT",
+      "Kingdom of Bhutan"
+    ],
+    "neighbors": [
+      "CHN",
+      "IND"
+    ],
+    "bbox": [
+      88.751938,
+      26.703049,
+      92.115265,
+      28.325275
+    ],
+    "centroid": [
+      90.5,
+      27.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "BOL",
+    "name": "Bolivia",
+    "aliases": [
+      "BO",
+      "Bolivia, Plurinational State of",
+      "Buliwya",
+      "Buliwya Mamallaqta",
+      "Estado Plurinacional de Bolivia",
+      "Plurinational State of Bolivia",
+      "Tetã Volívia",
+      "Wuliwya",
+      "Wuliwya Suyu"
+    ],
+    "neighbors": [
+      "ARG",
+      "BRA",
+      "CHL",
+      "PER",
+      "PRY"
+    ],
+    "bbox": [
+      -69.656189,
+      -22.901112,
+      -57.521118,
+      -9.679195
+    ],
+    "centroid": [
+      -65,
+      -17
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "aliases": [
+      "BA",
+      "Bosnia-Herzegovina",
+      "Босна и Херцеговина"
+    ],
+    "neighbors": [
+      "HRV",
+      "MNE",
+      "SRB"
+    ],
+    "bbox": [
+      15.736387,
+      42.565826,
+      19.621765,
+      45.265945
+    ],
+    "centroid": [
+      18,
+      44
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "BWA",
+    "name": "Botswana",
+    "aliases": [
+      "BW",
+      "Lefatshe la Botswana",
+      "Republic of Botswana"
+    ],
+    "neighbors": [
+      "NAM",
+      "ZAF",
+      "ZMB",
+      "ZWE"
+    ],
+    "bbox": [
+      19.996109,
+      -26.875557,
+      29.373623,
+      -17.781391
+    ],
+    "centroid": [
+      24,
+      -22
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Southern Africa"
+  },
+  {
+    "iso3": "BRA",
+    "name": "Brazil",
+    "aliases": [
+      "BR",
+      "Brasil",
+      "Federative Republic of Brazil",
+      "República Federativa do Brasil"
+    ],
+    "neighbors": [
+      "ARG",
+      "BOL",
+      "COL",
+      "GUY",
+      "PER",
+      "PRY",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "bbox": [
+      -74.01056,
+      -33.743896,
+      -29.84,
+      5.273889
+    ],
+    "centroid": [
+      -55,
+      -10
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 9,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "BRN",
+    "name": "Brunei",
+    "aliases": [
+      "BN",
+      "Brunei Darussalam",
+      "Nation of Brunei",
+      "Nation of Brunei, Abode of Peace",
+      "the Abode of Peace"
+    ],
+    "neighbors": [
+      "MYS"
+    ],
+    "bbox": [
+      114.095078,
+      4.0175,
+      115.36026,
+      5.05305
+    ],
+    "centroid": [
+      114.66666666,
+      4.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "BGR",
+    "name": "Bulgaria",
+    "aliases": [
+      "BG",
+      "Republic of Bulgaria",
+      "Република България"
+    ],
+    "neighbors": [
+      "GRC",
+      "MKD",
+      "ROU",
+      "SRB",
+      "TUR"
+    ],
+    "bbox": [
+      22.365276,
+      41.24305,
+      28.606384,
+      44.224716
+    ],
+    "centroid": [
+      25,
+      43
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "BFA",
+    "name": "Burkina Faso",
+    "aliases": [
+      "BF"
+    ],
+    "neighbors": [
+      "BEN",
+      "CIV",
+      "GHA",
+      "MLI",
+      "NER",
+      "TGO"
+    ],
+    "bbox": [
+      -5.521111,
+      9.393888,
+      2.397925,
+      15.082777
+    ],
+    "centroid": [
+      -2,
+      13
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "BDI",
+    "name": "Burundi",
+    "aliases": [
+      "BI",
+      "Republic of Burundi",
+      "Republika y'Uburundi",
+      "République du Burundi"
+    ],
+    "neighbors": [
+      "COD",
+      "RWA",
+      "TZA"
+    ],
+    "bbox": [
+      28.983887,
+      -4.448056,
+      30.853886,
+      -2.298056
+    ],
+    "centroid": [
+      30,
+      -3.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "KHM",
+    "name": "Cambodia",
+    "aliases": [
+      "KH",
+      "Kingdom of Cambodia"
+    ],
+    "neighbors": [
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "bbox": [
+      102.345543,
+      10.42274,
+      107.636383,
+      14.708618
+    ],
+    "centroid": [
+      105,
+      13
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "CMR",
+    "name": "Cameroon",
+    "aliases": [
+      "CM",
+      "Republic of Cameroon",
+      "République du Cameroun"
+    ],
+    "neighbors": [
+      "CAF",
+      "COG",
+      "GAB",
+      "GNQ",
+      "NGA",
+      "TCD"
+    ],
+    "bbox": [
+      8.502222,
+      1.654166,
+      16.207222,
+      13.085278
+    ],
+    "centroid": [
+      12,
+      6
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "CAN",
+    "name": "Canada",
+    "aliases": [
+      "CA"
+    ],
+    "neighbors": [
+      "USA"
+    ],
+    "bbox": [
+      -141.002991,
+      41.67555,
+      -52.61445,
+      83.113876
+    ],
+    "centroid": [
+      -95,
+      60
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Americas",
+    "subregion": "North America"
+  },
+  {
+    "iso3": "CPV",
+    "name": "Cape Verde",
+    "aliases": [
+      "CV",
+      "Republic of Cabo Verde",
+      "República de Cabo Verde"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -25.360558,
+      14.81111,
+      -22.665836,
+      17.193054
+    ],
+    "centroid": [
+      -24,
+      16
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "CAF",
+    "name": "Central African Republic",
+    "aliases": [
+      "CF",
+      "République centrafricaine"
+    ],
+    "neighbors": [
+      "CMR",
+      "COD",
+      "COG",
+      "SDN",
+      "SSD",
+      "TCD"
+    ],
+    "bbox": [
+      14.41861,
+      2.220833,
+      27.460278,
+      11.001389
+    ],
+    "centroid": [
+      21,
+      7
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "TCD",
+    "name": "Chad",
+    "aliases": [
+      "Republic of Chad",
+      "République du Tchad",
+      "Tchad",
+      "TD"
+    ],
+    "neighbors": [
+      "CAF",
+      "CMR",
+      "LBY",
+      "NER",
+      "NGA",
+      "SDN"
+    ],
+    "bbox": [
+      13.461666,
+      7.457777,
+      24.002747,
+      23.450554
+    ],
+    "centroid": [
+      19,
+      15
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "CHL",
+    "name": "Chile",
+    "aliases": [
+      "CL",
+      "Republic of Chile",
+      "República de Chile"
+    ],
+    "neighbors": [
+      "ARG",
+      "BOL",
+      "PER"
+    ],
+    "bbox": [
+      -109.449173,
+      -55.91972,
+      -66.41917,
+      -17.50528
+    ],
+    "centroid": [
+      -71,
+      -30
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "CHN",
+    "name": "China",
+    "aliases": [
+      "CN",
+      "People's Republic of China",
+      "Zhongguo",
+      "Zhōngguó",
+      "Zhonghua",
+      "Zhōnghuá Rénmín Gònghéguó",
+      "中华人民共和国"
+    ],
+    "neighbors": [
+      "AFG",
+      "BTN",
+      "IND",
+      "KAZ",
+      "KGZ",
+      "LAO",
+      "MMR",
+      "MNG",
+      "NPL",
+      "PAK",
+      "PRK",
+      "RUS",
+      "TJK",
+      "VNM"
+    ],
+    "bbox": [
+      73.6172,
+      18.168884,
+      134.77359,
+      53.554436
+    ],
+    "centroid": [
+      105,
+      35
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 14,
+    "region": "Asia",
+    "subregion": "Eastern Asia"
+  },
+  {
+    "iso3": "COL",
+    "name": "Colombia",
+    "aliases": [
+      "CO",
+      "Republic of Colombia",
+      "República de Colombia"
+    ],
+    "neighbors": [
+      "BRA",
+      "ECU",
+      "PAN",
+      "PER",
+      "VEN"
+    ],
+    "bbox": [
+      -81.72278,
+      -4.23687,
+      -66.871887,
+      13.378611
+    ],
+    "centroid": [
+      -72,
+      4
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "COM",
+    "name": "Comoros",
+    "aliases": [
+      "al-Ittiḥād al-Qumurī",
+      "KM",
+      "Udzima wa Komori",
+      "Union des Comores",
+      "Union of the Comoros"
+    ],
+    "neighbors": [],
+    "bbox": [
+      43.213608,
+      -12.383057,
+      44.53083,
+      -11.366945
+    ],
+    "centroid": [
+      44.25,
+      -12.16666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "CRI",
+    "name": "Costa Rica",
+    "aliases": [
+      "CR",
+      "Republic of Costa Rica",
+      "República de Costa Rica"
+    ],
+    "neighbors": [
+      "NIC",
+      "PAN"
+    ],
+    "bbox": [
+      -85.91139,
+      8.025669,
+      -82.5614,
+      11.21361
+    ],
+    "centroid": [
+      -84,
+      10
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "HRV",
+    "name": "Croatia",
+    "aliases": [
+      "HR",
+      "Hrvatska",
+      "Republic of Croatia",
+      "Republika Hrvatska"
+    ],
+    "neighbors": [
+      "BIH",
+      "HUN",
+      "MNE",
+      "SRB",
+      "SVN"
+    ],
+    "bbox": [
+      13.496387,
+      42.39666,
+      19.426109,
+      46.53583
+    ],
+    "centroid": [
+      15.5,
+      45.16666666
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "CUB",
+    "name": "Cuba",
+    "aliases": [
+      "CU",
+      "Republic of Cuba",
+      "República de Cuba"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -84.953339,
+      19.82194,
+      -74.13084,
+      23.204166
+    ],
+    "centroid": [
+      -80,
+      21.5
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "CYP",
+    "name": "Cyprus",
+    "aliases": [
+      "CY",
+      "Kıbrıs",
+      "Kıbrıs Cumhuriyeti",
+      "Kýpros",
+      "Republic of Cyprus",
+      "Κυπριακή Δημοκρατία"
+    ],
+    "neighbors": [],
+    "bbox": [
+      32.269165,
+      34.56255,
+      34.590553,
+      35.690277
+    ],
+    "centroid": [
+      33,
+      35
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "CZE",
+    "name": "Czechia",
+    "aliases": [
+      "Česká republika",
+      "Česko",
+      "CZ",
+      "Czech Republic"
+    ],
+    "neighbors": [
+      "AUT",
+      "DEU",
+      "POL",
+      "SVK"
+    ],
+    "bbox": [
+      12.093704,
+      48.581379,
+      18.852219,
+      51.053604
+    ],
+    "centroid": [
+      15.5,
+      49.75
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Central Europe"
+  },
+  {
+    "iso3": "DNK",
+    "name": "Denmark",
+    "aliases": [
+      "Danmark",
+      "DK",
+      "Kingdom of Denmark",
+      "Kongeriget Danmark"
+    ],
+    "neighbors": [
+      "DEU"
+    ],
+    "bbox": [
+      8.087221,
+      54.561661,
+      15.15,
+      57.746666
+    ],
+    "centroid": [
+      10,
+      56
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "DJI",
+    "name": "Djibouti",
+    "aliases": [
+      "DJ",
+      "Gabuuti",
+      "Gabuutih Ummuuno",
+      "Jabuuti",
+      "Jamhuuriyadda Jabuuti",
+      "Republic of Djibouti",
+      "République de Djibouti"
+    ],
+    "neighbors": [
+      "ERI",
+      "ETH",
+      "SOM"
+    ],
+    "bbox": [
+      41.75972,
+      10.941944,
+      43.42083,
+      12.708332
+    ],
+    "centroid": [
+      43,
+      11.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "DMA",
+    "name": "Dominica",
+    "aliases": [
+      "Commonwealth of Dominica",
+      "DM",
+      "Dominique",
+      "Wai‘tu kubuli"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -61.491394,
+      15.198055,
+      -61.250557,
+      15.631943
+    ],
+    "centroid": [
+      -61.33333333,
+      15.41666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "DOM",
+    "name": "Dominican Republic",
+    "aliases": [
+      "DO"
+    ],
+    "neighbors": [
+      "HTI"
+    ],
+    "bbox": [
+      -72.00307,
+      17.540276,
+      -68.32223,
+      19.93111
+    ],
+    "centroid": [
+      -70.66666666,
+      19
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "COD",
+    "name": "DR Congo",
+    "aliases": [
+      "CD",
+      "Congo Kinshasa",
+      "Congo-Kinshasa",
+      "Congo, the Democratic Republic of the",
+      "Democratic Republic of Congo",
+      "Democratic Republic of the Congo",
+      "DRC"
+    ],
+    "neighbors": [
+      "AGO",
+      "BDI",
+      "CAF",
+      "COG",
+      "RWA",
+      "SSD",
+      "TZA",
+      "UGA",
+      "ZMB"
+    ],
+    "bbox": [
+      12.214552,
+      -13.458057,
+      31.302776,
+      5.381389
+    ],
+    "centroid": [
+      25,
+      0
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 9,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "ECU",
+    "name": "Ecuador",
+    "aliases": [
+      "EC",
+      "Republic of Ecuador",
+      "República del Ecuador"
+    ],
+    "neighbors": [
+      "COL",
+      "PER"
+    ],
+    "bbox": [
+      -91.663895,
+      -5.00913,
+      -75.21608,
+      1.43778
+    ],
+    "centroid": [
+      -77.5,
+      -2
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "EGY",
+    "name": "Egypt",
+    "aliases": [
+      "Arab Republic of Egypt",
+      "EG"
+    ],
+    "neighbors": [
+      "ISR",
+      "LBY",
+      "SDN"
+    ],
+    "bbox": [
+      24.70666,
+      21.994164,
+      36.89833,
+      31.64694
+    ],
+    "centroid": [
+      30,
+      27
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Northern Africa"
+  },
+  {
+    "iso3": "SLV",
+    "name": "El Salvador",
+    "aliases": [
+      "Republic of El Salvador",
+      "República de El Salvador",
+      "SV"
+    ],
+    "neighbors": [
+      "GTM",
+      "HND"
+    ],
+    "bbox": [
+      -90.108337,
+      13.156387,
+      -87.68472,
+      14.431982
+    ],
+    "centroid": [
+      -88.91666666,
+      13.83333333
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "GNQ",
+    "name": "Equatorial Guinea",
+    "aliases": [
+      "GQ",
+      "Republic of Equatorial Guinea",
+      "República da Guiné Equatorial",
+      "República de Guinea Ecuatorial",
+      "République de Guinée équatoriale"
+    ],
+    "neighbors": [
+      "CMR",
+      "GAB"
+    ],
+    "bbox": [
+      5.615277,
+      -1.479445,
+      11.35389,
+      3.76333
+    ],
+    "centroid": [
+      10,
+      2
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "ERI",
+    "name": "Eritrea",
+    "aliases": [
+      "Dawlat Iritriyá",
+      "ER",
+      "Iritriyā",
+      "State of Eritrea",
+      "ʾErtrā",
+      "ሃገረ ኤርትራ"
+    ],
+    "neighbors": [
+      "DJI",
+      "ETH",
+      "SDN"
+    ],
+    "bbox": [
+      36.443283,
+      12.363888,
+      43.121384,
+      17.994881
+    ],
+    "centroid": [
+      39,
+      15
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "EST",
+    "name": "Estonia",
+    "aliases": [
+      "EE",
+      "Eesti",
+      "Eesti Vabariik",
+      "Republic of Estonia"
+    ],
+    "neighbors": [
+      "LVA",
+      "RUS"
+    ],
+    "bbox": [
+      21.83194,
+      57.522217,
+      28.195274,
+      59.668327
+    ],
+    "centroid": [
+      26,
+      59
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "SWZ",
+    "name": "Eswatini",
+    "aliases": [
+      "Kingdom of Eswatini",
+      "Ngwane",
+      "Swatini",
+      "Swaziland",
+      "SZ",
+      "Umbuso weSwatini",
+      "weSwatini"
+    ],
+    "neighbors": [
+      "MOZ",
+      "ZAF"
+    ],
+    "bbox": [
+      30.798332,
+      -27.316669,
+      32.1334,
+      -25.728336
+    ],
+    "centroid": [
+      31.5,
+      -26.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Africa",
+    "subregion": "Southern Africa"
+  },
+  {
+    "iso3": "ETH",
+    "name": "Ethiopia",
+    "aliases": [
+      "ET",
+      "Federal Democratic Republic of Ethiopia",
+      "ʾĪtyōṗṗyā",
+      "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ"
+    ],
+    "neighbors": [
+      "DJI",
+      "ERI",
+      "KEN",
+      "SDN",
+      "SOM",
+      "SSD"
+    ],
+    "bbox": [
+      32.991104,
+      3.406389,
+      47.988243,
+      14.88361
+    ],
+    "centroid": [
+      38,
+      8
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "FJI",
+    "name": "Fiji",
+    "aliases": [
+      "Fijī Gaṇarājya",
+      "FJ",
+      "Matanitu ko Viti",
+      "Republic of Fiji",
+      "Viti"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -180,
+      -20.67444,
+      180,
+      -12.48194
+    ],
+    "centroid": [
+      175,
+      -18
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Melanesia"
+  },
+  {
+    "iso3": "FIN",
+    "name": "Finland",
+    "aliases": [
+      "FI",
+      "Republic of Finland",
+      "Republiken Finland",
+      "Suomen tasavalta",
+      "Suomi"
+    ],
+    "neighbors": [
+      "NOR",
+      "RUS",
+      "SWE"
+    ],
+    "bbox": [
+      20.580929,
+      59.804993,
+      31.588928,
+      70.088882
+    ],
+    "centroid": [
+      26,
+      64
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "FRA",
+    "name": "France",
+    "aliases": [
+      "FR",
+      "French Republic",
+      "République française"
+    ],
+    "neighbors": [
+      "AND",
+      "BEL",
+      "CHE",
+      "DEU",
+      "ESP",
+      "ITA",
+      "LUX",
+      "MCO"
+    ],
+    "bbox": [
+      -5.134723,
+      41.364166,
+      9.562222,
+      51.09111
+    ],
+    "centroid": [
+      2,
+      46
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 8,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "GAB",
+    "name": "Gabon",
+    "aliases": [
+      "GA",
+      "Gabonese Republic",
+      "République Gabonaise"
+    ],
+    "neighbors": [
+      "CMR",
+      "COG",
+      "GNQ"
+    ],
+    "bbox": [
+      8.6983320000001,
+      -3.925277,
+      14.520555,
+      2.317898
+    ],
+    "centroid": [
+      11.75,
+      -1
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "GMB",
+    "name": "Gambia",
+    "aliases": [
+      "GM",
+      "Republic of the Gambia"
+    ],
+    "neighbors": [
+      "SEN"
+    ],
+    "bbox": [
+      -16.821667,
+      13.059977,
+      -13.798613,
+      13.826387
+    ],
+    "centroid": [
+      -16.56666666,
+      13.46666666
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "GEO",
+    "name": "Georgia",
+    "aliases": [
+      "GE",
+      "Sakartvelo"
+    ],
+    "neighbors": [
+      "ARM",
+      "AZE",
+      "RUS",
+      "TUR"
+    ],
+    "bbox": [
+      40.002968,
+      41.046097,
+      46.710815,
+      43.584717
+    ],
+    "centroid": [
+      43.5,
+      42
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "DEU",
+    "name": "Germany",
+    "aliases": [
+      "Bundesrepublik Deutschland",
+      "DE",
+      "Federal Republic of Germany"
+    ],
+    "neighbors": [
+      "AUT",
+      "BEL",
+      "CHE",
+      "CZE",
+      "DNK",
+      "FRA",
+      "LUX",
+      "NLD",
+      "POL"
+    ],
+    "bbox": [
+      5.864166,
+      47.274719,
+      15.03889,
+      55.056664
+    ],
+    "centroid": [
+      9,
+      51
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 9,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "GHA",
+    "name": "Ghana",
+    "aliases": [
+      "GH",
+      "Republic of Ghana"
+    ],
+    "neighbors": [
+      "BFA",
+      "CIV",
+      "TGO"
+    ],
+    "bbox": [
+      -3.249167,
+      4.726388,
+      1.202778,
+      11.166666
+    ],
+    "centroid": [
+      -2,
+      8
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "GRC",
+    "name": "Greece",
+    "aliases": [
+      "Elláda",
+      "GR",
+      "Hellenic Republic",
+      "Ελληνική Δημοκρατία"
+    ],
+    "neighbors": [
+      "ALB",
+      "BGR",
+      "MKD",
+      "TUR"
+    ],
+    "bbox": [
+      19.37611,
+      34.808884,
+      28.238049,
+      41.748322
+    ],
+    "centroid": [
+      22,
+      39
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "GRD",
+    "name": "Grenada",
+    "aliases": [
+      "GD"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -61.78973,
+      11.996387,
+      -61.41862,
+      12.529165
+    ],
+    "centroid": [
+      -61.66666666,
+      12.11666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "GTM",
+    "name": "Guatemala",
+    "aliases": [
+      "GT",
+      "Republic of Guatemala"
+    ],
+    "neighbors": [
+      "BLZ",
+      "HND",
+      "MEX",
+      "SLV"
+    ],
+    "bbox": [
+      -92.24678,
+      13.745832,
+      -88.214737,
+      17.82111
+    ],
+    "centroid": [
+      -90.25,
+      15.5
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "GIN",
+    "name": "Guinea",
+    "aliases": [
+      "GN",
+      "Republic of Guinea",
+      "République de Guinée"
+    ],
+    "neighbors": [
+      "CIV",
+      "GNB",
+      "LBR",
+      "MLI",
+      "SEN",
+      "SLE"
+    ],
+    "bbox": [
+      -15.081112,
+      7.198889,
+      -7.646536,
+      12.6775
+    ],
+    "centroid": [
+      -10,
+      11
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "GNB",
+    "name": "Guinea-Bissau",
+    "aliases": [
+      "GW",
+      "Republic of Guinea-Bissau",
+      "República da Guiné-Bissau"
+    ],
+    "neighbors": [
+      "GIN",
+      "SEN"
+    ],
+    "bbox": [
+      -16.71777,
+      10.922777,
+      -13.643057,
+      12.684721
+    ],
+    "centroid": [
+      -15,
+      12
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "GUY",
+    "name": "Guyana",
+    "aliases": [
+      "Co-operative Republic of Guyana",
+      "GY"
+    ],
+    "neighbors": [
+      "BRA",
+      "SUR",
+      "VEN"
+    ],
+    "bbox": [
+      -61.389725,
+      1.185555,
+      -56.47063,
+      8.535276
+    ],
+    "centroid": [
+      -59,
+      5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "HTI",
+    "name": "Haiti",
+    "aliases": [
+      "HT",
+      "Repiblik Ayiti",
+      "Republic of Haiti",
+      "République d'Haïti"
+    ],
+    "neighbors": [
+      "DOM"
+    ],
+    "bbox": [
+      -74.46779,
+      18.022778,
+      -71.628891,
+      20.09222
+    ],
+    "centroid": [
+      -72.41666666,
+      19
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "HND",
+    "name": "Honduras",
+    "aliases": [
+      "HN",
+      "Republic of Honduras",
+      "República de Honduras"
+    ],
+    "neighbors": [
+      "GTM",
+      "NIC",
+      "SLV"
+    ],
+    "bbox": [
+      -89.35196,
+      12.979721,
+      -83.13185,
+      17.420277
+    ],
+    "centroid": [
+      -86.5,
+      15
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "HUN",
+    "name": "Hungary",
+    "aliases": [
+      "HU"
+    ],
+    "neighbors": [
+      "AUT",
+      "HRV",
+      "ROU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "UKR"
+    ],
+    "bbox": [
+      16.111805,
+      45.748329,
+      22.894804,
+      48.57666
+    ],
+    "centroid": [
+      20,
+      47
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Europe",
+    "subregion": "Central Europe"
+  },
+  {
+    "iso3": "ISL",
+    "name": "Iceland",
+    "aliases": [
+      "IS",
+      "Island",
+      "Lýðveldið Ísland",
+      "Republic of Iceland"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -24.542225,
+      63.389999,
+      -13.499445,
+      66.536102
+    ],
+    "centroid": [
+      -18,
+      65
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "IND",
+    "name": "India",
+    "aliases": [
+      "Bhārat",
+      "Bharat Ganrajya",
+      "IN",
+      "Republic of India",
+      "இந்தியா"
+    ],
+    "neighbors": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "MMR",
+      "NPL",
+      "PAK"
+    ],
+    "bbox": [
+      68.139435,
+      6.745554,
+      97.380539,
+      35.506104
+    ],
+    "centroid": [
+      77,
+      20
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "IDN",
+    "name": "Indonesia",
+    "aliases": [
+      "ID",
+      "Republic of Indonesia",
+      "Republik Indonesia"
+    ],
+    "neighbors": [
+      "MYS",
+      "PNG",
+      "TLS"
+    ],
+    "bbox": [
+      95.008026,
+      -10.93,
+      141.007019,
+      5.91389
+    ],
+    "centroid": [
+      120,
+      -5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "IRN",
+    "name": "Iran",
+    "aliases": [
+      "IR",
+      "Iran, Islamic Republic of",
+      "Islamic Republic of Iran",
+      "Jomhuri-ye Eslāmi-ye Irān"
+    ],
+    "neighbors": [
+      "AFG",
+      "ARM",
+      "AZE",
+      "IRQ",
+      "PAK",
+      "TKM",
+      "TUR"
+    ],
+    "bbox": [
+      44.034157,
+      25.075275,
+      63.341934,
+      39.78054
+    ],
+    "centroid": [
+      53,
+      32
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "IRQ",
+    "name": "Iraq",
+    "aliases": [
+      "IQ",
+      "Jumhūriyyat al-‘Irāq",
+      "Republic of Iraq"
+    ],
+    "neighbors": [
+      "IRN",
+      "JOR",
+      "KWT",
+      "SAU",
+      "SYR",
+      "TUR"
+    ],
+    "bbox": [
+      38.794701,
+      29.061661,
+      48.563881,
+      37.38472
+    ],
+    "centroid": [
+      44,
+      33
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "IRL",
+    "name": "Ireland",
+    "aliases": [
+      "Éire",
+      "IE",
+      "Poblacht na hÉireann",
+      "Republic of Ireland"
+    ],
+    "neighbors": [
+      "GBR"
+    ],
+    "bbox": [
+      -10.47472,
+      51.445549,
+      -6.013056,
+      55.380272
+    ],
+    "centroid": [
+      -8,
+      53
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "ISR",
+    "name": "Israel",
+    "aliases": [
+      "IL",
+      "Medīnat Yisrā'el",
+      "State of Israel"
+    ],
+    "neighbors": [
+      "EGY",
+      "JOR",
+      "LBN",
+      "SYR"
+    ],
+    "bbox": [
+      34.267578,
+      29.486706,
+      35.683052,
+      33.270271
+    ],
+    "centroid": [
+      35.13,
+      31.47
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "ITA",
+    "name": "Italy",
+    "aliases": [
+      "IT",
+      "Italian Republic",
+      "Repubblica italiana"
+    ],
+    "neighbors": [
+      "AUT",
+      "CHE",
+      "FRA",
+      "SMR",
+      "SVN"
+    ],
+    "bbox": [
+      6.61976,
+      36.649162,
+      18.514999,
+      47.09472
+    ],
+    "centroid": [
+      12.83333333,
+      42.83333333
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "CIV",
+    "name": "Ivory Coast",
+    "aliases": [
+      "CI",
+      "Cote d Ivoire",
+      "Cote d'Ivoire",
+      "Côte d'Ivoire",
+      "Cote dIvoire",
+      "Republic of Côte d'Ivoire",
+      "République de Côte d'Ivoire"
+    ],
+    "neighbors": [
+      "BFA",
+      "GHA",
+      "GIN",
+      "LBR",
+      "MLI"
+    ],
+    "bbox": [
+      -8.60638,
+      4.344722,
+      -2.48778,
+      10.735256
+    ],
+    "centroid": [
+      -5,
+      8
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "JAM",
+    "name": "Jamaica",
+    "aliases": [
+      "JM"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -78.373901,
+      17.696663,
+      -76.221115,
+      18.522499
+    ],
+    "centroid": [
+      -77.5,
+      18.25
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "JPN",
+    "name": "Japan",
+    "aliases": [
+      "JP",
+      "Nihon",
+      "Nippon"
+    ],
+    "neighbors": [],
+    "bbox": [
+      122.935257,
+      24.250832,
+      153.96579,
+      45.486382
+    ],
+    "centroid": [
+      138,
+      36
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Asia",
+    "subregion": "Eastern Asia"
+  },
+  {
+    "iso3": "JOR",
+    "name": "Jordan",
+    "aliases": [
+      "al-Mamlakah al-Urdunīyah al-Hāshimīyah",
+      "Hashemite Kingdom of Jordan",
+      "JO"
+    ],
+    "neighbors": [
+      "IRQ",
+      "ISR",
+      "SAU",
+      "SYR"
+    ],
+    "bbox": [
+      34.959999,
+      29.188889,
+      39.301109,
+      33.377594
+    ],
+    "centroid": [
+      36,
+      31
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "KAZ",
+    "name": "Kazakhstan",
+    "aliases": [
+      "KZ",
+      "Qazaqstan",
+      "Qazaqstan Respublïkası",
+      "Republic of Kazakhstan",
+      "Respublika Kazakhstan",
+      "Казахстан",
+      "Қазақстан Республикасы",
+      "Республика Казахстан"
+    ],
+    "neighbors": [
+      "CHN",
+      "KGZ",
+      "RUS",
+      "TKM",
+      "UZB"
+    ],
+    "bbox": [
+      46.499161,
+      40.59444,
+      87.348206,
+      55.44471
+    ],
+    "centroid": [
+      68,
+      48
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Asia",
+    "subregion": "Central Asia"
+  },
+  {
+    "iso3": "KEN",
+    "name": "Kenya",
+    "aliases": [
+      "Jamhuri ya Kenya",
+      "KE",
+      "Republic of Kenya"
+    ],
+    "neighbors": [
+      "ETH",
+      "SOM",
+      "SSD",
+      "TZA",
+      "UGA"
+    ],
+    "bbox": [
+      33.907219,
+      -4.66962,
+      41.905167,
+      4.622499
+    ],
+    "centroid": [
+      38,
+      1
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "KIR",
+    "name": "Kiribati",
+    "aliases": [
+      "Independent and Sovereign Republic of Kiribati",
+      "KI",
+      "Republic of Kiribati",
+      "Ribaberiki Kiribati"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -172.233337,
+      -11.46666,
+      176.85025,
+      4.725832
+    ],
+    "centroid": [
+      173,
+      1.41666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Micronesia"
+  },
+  {
+    "iso3": "KWT",
+    "name": "Kuwait",
+    "aliases": [
+      "Dawlat al-Kuwait",
+      "KW",
+      "State of Kuwait"
+    ],
+    "neighbors": [
+      "IRQ",
+      "SAU"
+    ],
+    "bbox": [
+      46.546944,
+      28.538883,
+      48.416588,
+      30.084438
+    ],
+    "centroid": [
+      45.75,
+      29.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "KGZ",
+    "name": "Kyrgyzstan",
+    "aliases": [
+      "KG",
+      "Kyrgyz Republic",
+      "Kyrgyz Respublikasy",
+      "Киргизия",
+      "Кыргыз Республикасы"
+    ],
+    "neighbors": [
+      "CHN",
+      "KAZ",
+      "TJK",
+      "UZB"
+    ],
+    "bbox": [
+      69.248871,
+      39.191856,
+      80.283325,
+      43.216904
+    ],
+    "centroid": [
+      75,
+      41
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Central Asia"
+  },
+  {
+    "iso3": "LAO",
+    "name": "Laos",
+    "aliases": [
+      "LA",
+      "Lao",
+      "Lao PDR",
+      "Lao People's Democratic Republic",
+      "Sathalanalat Paxathipatai Paxaxon Lao"
+    ],
+    "neighbors": [
+      "CHN",
+      "KHM",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "bbox": [
+      100.09137,
+      13.926664,
+      107.695251,
+      22.500832
+    ],
+    "centroid": [
+      105,
+      18
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "LVA",
+    "name": "Latvia",
+    "aliases": [
+      "Latvijas Republika",
+      "LV",
+      "Republic of Latvia"
+    ],
+    "neighbors": [
+      "BLR",
+      "EST",
+      "LTU",
+      "RUS"
+    ],
+    "bbox": [
+      20.968605,
+      55.674835,
+      28.237774,
+      58.084435
+    ],
+    "centroid": [
+      25,
+      57
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "LBN",
+    "name": "Lebanon",
+    "aliases": [
+      "Al-Jumhūrīyah Al-Libnānīyah",
+      "LB",
+      "Lebanese Republic"
+    ],
+    "neighbors": [
+      "ISR",
+      "SYR"
+    ],
+    "bbox": [
+      35.10083,
+      33.061943,
+      36.623741,
+      34.647499
+    ],
+    "centroid": [
+      35.83333333,
+      33.83333333
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "LSO",
+    "name": "Lesotho",
+    "aliases": [
+      "Kingdom of Lesotho",
+      "LS",
+      "Muso oa Lesotho"
+    ],
+    "neighbors": [
+      "ZAF"
+    ],
+    "bbox": [
+      27.011108,
+      -30.650528,
+      29.456108,
+      -28.569447
+    ],
+    "centroid": [
+      28.5,
+      -29.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Africa",
+    "subregion": "Southern Africa"
+  },
+  {
+    "iso3": "LBR",
+    "name": "Liberia",
+    "aliases": [
+      "LR",
+      "Republic of Liberia"
+    ],
+    "neighbors": [
+      "CIV",
+      "GIN",
+      "SLE"
+    ],
+    "bbox": [
+      -11.492331,
+      4.343333,
+      -7.366667,
+      8.512777
+    ],
+    "centroid": [
+      -9.5,
+      6.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "LBY",
+    "name": "Libya",
+    "aliases": [
+      "Dawlat Libya",
+      "LY",
+      "State of Libya"
+    ],
+    "neighbors": [
+      "DZA",
+      "EGY",
+      "NER",
+      "SDN",
+      "TCD",
+      "TUN"
+    ],
+    "bbox": [
+      9.303888,
+      19.499065,
+      25.152775,
+      33.171135
+    ],
+    "centroid": [
+      17,
+      25
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Northern Africa"
+  },
+  {
+    "iso3": "LIE",
+    "name": "Liechtenstein",
+    "aliases": [
+      "Fürstentum Liechtenstein",
+      "LI",
+      "Principality of Liechtenstein"
+    ],
+    "neighbors": [
+      "AUT",
+      "CHE"
+    ],
+    "bbox": [
+      9.474637,
+      47.057457,
+      9.63611,
+      47.274544
+    ],
+    "centroid": [
+      9.53333333,
+      47.26666666
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "LTU",
+    "name": "Lithuania",
+    "aliases": [
+      "Lietuvos Respublika",
+      "LT",
+      "Republic of Lithuania"
+    ],
+    "neighbors": [
+      "BLR",
+      "LVA",
+      "POL",
+      "RUS"
+    ],
+    "bbox": [
+      20.942833,
+      53.888046,
+      26.819717,
+      56.450829
+    ],
+    "centroid": [
+      24,
+      56
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "LUX",
+    "name": "Luxembourg",
+    "aliases": [
+      "Grand Duchy of Luxembourg",
+      "Grand-Duché de Luxembourg",
+      "Großherzogtum Luxemburg",
+      "Groussherzogtum Lëtzebuerg",
+      "LU"
+    ],
+    "neighbors": [
+      "BEL",
+      "DEU",
+      "FRA"
+    ],
+    "bbox": [
+      5.734444,
+      49.448326,
+      6.524722,
+      50.18222
+    ],
+    "centroid": [
+      6.16666666,
+      49.75
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "MDG",
+    "name": "Madagascar",
+    "aliases": [
+      "MG",
+      "Repoblikan'i Madagasikara",
+      "Republic of Madagascar",
+      "République de Madagascar"
+    ],
+    "neighbors": [],
+    "bbox": [
+      43.236824,
+      -25.588337,
+      50.501389,
+      -11.945557
+    ],
+    "centroid": [
+      47,
+      -20
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "MWI",
+    "name": "Malawi",
+    "aliases": [
+      "MW",
+      "Republic of Malawi"
+    ],
+    "neighbors": [
+      "MOZ",
+      "TZA",
+      "ZMB"
+    ],
+    "bbox": [
+      32.67889,
+      -17.135281,
+      35.924164,
+      -9.373335
+    ],
+    "centroid": [
+      34,
+      -13.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "MYS",
+    "name": "Malaysia",
+    "aliases": [
+      "MY"
+    ],
+    "neighbors": [
+      "BRN",
+      "IDN",
+      "THA"
+    ],
+    "bbox": [
+      99.640823,
+      0.852778,
+      119.275818,
+      7.3536100000001
+    ],
+    "centroid": [
+      112.5,
+      2.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "MDV",
+    "name": "Maldives",
+    "aliases": [
+      "Dhivehi Raajjeyge Jumhooriyya",
+      "Maldive Islands",
+      "MV",
+      "Republic of the Maldives"
+    ],
+    "neighbors": [],
+    "bbox": [
+      72.687759,
+      -0.690833,
+      73.753601,
+      7.096388
+    ],
+    "centroid": [
+      73,
+      3.25
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "MLI",
+    "name": "Mali",
+    "aliases": [
+      "ML",
+      "Republic of Mali",
+      "République du Mali"
+    ],
+    "neighbors": [
+      "BFA",
+      "CIV",
+      "DZA",
+      "GIN",
+      "MRT",
+      "NER",
+      "SEN"
+    ],
+    "bbox": [
+      -12.244833,
+      10.141109,
+      4.2525,
+      25.000275
+    ],
+    "centroid": [
+      -4,
+      17
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "MLT",
+    "name": "Malta",
+    "aliases": [
+      "MT",
+      "Repubblika ta' Malta",
+      "Republic of Malta"
+    ],
+    "neighbors": [],
+    "bbox": [
+      14.180832,
+      35.799995,
+      14.57,
+      36.074997
+    ],
+    "centroid": [
+      14.58333333,
+      35.83333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "MHL",
+    "name": "Marshall Islands",
+    "aliases": [
+      "Aolepān Aorōkin M̧ajeļ",
+      "MH",
+      "Republic of the Marshall Islands"
+    ],
+    "neighbors": [],
+    "bbox": [
+      162.323578,
+      5.600277,
+      172.090515,
+      14.59833
+    ],
+    "centroid": [
+      168,
+      9
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Micronesia"
+  },
+  {
+    "iso3": "MRT",
+    "name": "Mauritania",
+    "aliases": [
+      "al-Jumhūriyyah al-ʾIslāmiyyah al-Mūrītāniyyah",
+      "Islamic Republic of Mauritania",
+      "MR"
+    ],
+    "neighbors": [
+      "DZA",
+      "MLI",
+      "SEN"
+    ],
+    "bbox": [
+      -17.07556,
+      14.725321,
+      -4.80611,
+      27.290459
+    ],
+    "centroid": [
+      -12,
+      20
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "MUS",
+    "name": "Mauritius",
+    "aliases": [
+      "MU",
+      "Republic of Mauritius",
+      "République de Maurice"
+    ],
+    "neighbors": [],
+    "bbox": [
+      56.50722,
+      -20.520557,
+      63.498604,
+      -10.316668
+    ],
+    "centroid": [
+      57.55,
+      -20.28333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "MEX",
+    "name": "Mexico",
+    "aliases": [
+      "Estados Unidos Mexicanos",
+      "Mexicanos",
+      "MX",
+      "United Mexican States"
+    ],
+    "neighbors": [
+      "BLZ",
+      "GTM",
+      "USA"
+    ],
+    "bbox": [
+      -118.404167,
+      14.550547,
+      -86.7014,
+      32.718456
+    ],
+    "centroid": [
+      -102,
+      23
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Americas",
+    "subregion": "North America"
+  },
+  {
+    "iso3": "FSM",
+    "name": "Micronesia",
+    "aliases": [
+      "Federated States of Micronesia",
+      "FM",
+      "Micronesia, Federated States of"
+    ],
+    "neighbors": [],
+    "bbox": [
+      138.058319,
+      5.2616660000001,
+      163.043304,
+      9.589441
+    ],
+    "centroid": [
+      158.25,
+      6.91666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Micronesia"
+  },
+  {
+    "iso3": "MDA",
+    "name": "Moldova",
+    "aliases": [
+      "MD",
+      "Moldova, Republic of",
+      "Republic of Moldova",
+      "Republica Moldova"
+    ],
+    "neighbors": [
+      "ROU",
+      "UKR"
+    ],
+    "bbox": [
+      26.634995,
+      45.448647,
+      30.133228,
+      48.468323
+    ],
+    "centroid": [
+      29,
+      47
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Europe",
+    "subregion": "Eastern Europe"
+  },
+  {
+    "iso3": "MCO",
+    "name": "Monaco",
+    "aliases": [
+      "MC",
+      "Principality of Monaco",
+      "Principauté de Monaco"
+    ],
+    "neighbors": [
+      "FRA"
+    ],
+    "bbox": [
+      7.386389,
+      43.727547,
+      7.439293,
+      43.773048
+    ],
+    "centroid": [
+      7.4,
+      43.73333333
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "MNG",
+    "name": "Mongolia",
+    "aliases": [
+      "MN"
+    ],
+    "neighbors": [
+      "CHN",
+      "RUS"
+    ],
+    "bbox": [
+      87.758331,
+      41.581383,
+      119.934982,
+      52.143608
+    ],
+    "centroid": [
+      105,
+      46
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Eastern Asia"
+  },
+  {
+    "iso3": "MNE",
+    "name": "Montenegro",
+    "aliases": [
+      "Crna Gora",
+      "ME"
+    ],
+    "neighbors": [
+      "ALB",
+      "BIH",
+      "HRV",
+      "SRB"
+    ],
+    "bbox": [
+      18.453331,
+      41.848999,
+      20.382774,
+      43.556107
+    ],
+    "centroid": [
+      19.3,
+      42.5
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "MAR",
+    "name": "Morocco",
+    "aliases": [
+      "Al-Mamlakah al-Maġribiyah",
+      "Kingdom of Morocco",
+      "MA"
+    ],
+    "neighbors": [
+      "DZA",
+      "ESP"
+    ],
+    "bbox": [
+      -13.174961,
+      27.664238,
+      -1.010278,
+      35.919167
+    ],
+    "centroid": [
+      -5,
+      32
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Africa",
+    "subregion": "Northern Africa"
+  },
+  {
+    "iso3": "MOZ",
+    "name": "Mozambique",
+    "aliases": [
+      "MZ",
+      "Republic of Mozambique",
+      "República de Moçambique"
+    ],
+    "neighbors": [
+      "MWI",
+      "SWZ",
+      "TZA",
+      "ZAF",
+      "ZMB",
+      "ZWE"
+    ],
+    "bbox": [
+      30.213017,
+      -26.860279,
+      40.846107,
+      -10.471111
+    ],
+    "centroid": [
+      35,
+      -18.25
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "MMR",
+    "name": "Myanmar",
+    "aliases": [
+      "Burma",
+      "MM",
+      "Pyidaunzu Thanmăda Myăma Nainngandaw",
+      "Republic of the Union of Myanmar"
+    ],
+    "neighbors": [
+      "BGD",
+      "CHN",
+      "IND",
+      "LAO",
+      "THA"
+    ],
+    "bbox": [
+      92.204987,
+      9.78639,
+      101.170822,
+      28.549164
+    ],
+    "centroid": [
+      98,
+      22
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "NAM",
+    "name": "Namibia",
+    "aliases": [
+      "NA",
+      "Namibië",
+      "Republic of Namibia"
+    ],
+    "neighbors": [
+      "AGO",
+      "BWA",
+      "ZAF",
+      "ZMB"
+    ],
+    "bbox": [
+      11.716389,
+      -28.962502,
+      25.264431,
+      -16.952778
+    ],
+    "centroid": [
+      17,
+      -22
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Southern Africa"
+  },
+  {
+    "iso3": "NRU",
+    "name": "Nauru",
+    "aliases": [
+      "Naoero",
+      "NR",
+      "Pleasant Island",
+      "Republic of Nauru",
+      "Ripublik Naoero"
+    ],
+    "neighbors": [],
+    "bbox": [
+      166.904419,
+      -0.552222,
+      166.958588,
+      -0.493333
+    ],
+    "centroid": [
+      166.91666666,
+      -0.53333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Micronesia"
+  },
+  {
+    "iso3": "NPL",
+    "name": "Nepal",
+    "aliases": [
+      "Federal Democratic Republic of Nepal",
+      "Loktāntrik Ganatantra Nepāl",
+      "NP"
+    ],
+    "neighbors": [
+      "CHN",
+      "IND"
+    ],
+    "bbox": [
+      80.0522,
+      26.364719,
+      88.195816,
+      30.424995
+    ],
+    "centroid": [
+      84,
+      28
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "NLD",
+    "name": "Netherlands",
+    "aliases": [
+      "Holland",
+      "Kingdom of the Netherlands",
+      "Nederland",
+      "NL",
+      "The Netherlands"
+    ],
+    "neighbors": [
+      "BEL",
+      "DEU"
+    ],
+    "bbox": [
+      3.37087,
+      50.753883,
+      7.211666,
+      53.511383
+    ],
+    "centroid": [
+      5.75,
+      52.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "NZL",
+    "name": "New Zealand",
+    "aliases": [
+      "Aotearoa",
+      "NZ"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -178.613068,
+      -52.578056,
+      179.082733,
+      -29.22306
+    ],
+    "centroid": [
+      174,
+      -41
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand"
+  },
+  {
+    "iso3": "NIC",
+    "name": "Nicaragua",
+    "aliases": [
+      "NI",
+      "Republic of Nicaragua",
+      "República de Nicaragua"
+    ],
+    "neighbors": [
+      "CRI",
+      "HND"
+    ],
+    "bbox": [
+      -87.693069,
+      10.708611,
+      -82.72139,
+      15.022221
+    ],
+    "centroid": [
+      -85,
+      13
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "NER",
+    "name": "Niger",
+    "aliases": [
+      "NE",
+      "Nijar",
+      "Republic of Niger"
+    ],
+    "neighbors": [
+      "BEN",
+      "BFA",
+      "DZA",
+      "LBY",
+      "MLI",
+      "NGA",
+      "TCD"
+    ],
+    "bbox": [
+      0.166667,
+      11.693274,
+      15.996666,
+      23.522305
+    ],
+    "centroid": [
+      8,
+      16
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "NGA",
+    "name": "Nigeria",
+    "aliases": [
+      "Federal Republic of Nigeria",
+      "Naíjíríà",
+      "NG",
+      "Nijeriya"
+    ],
+    "neighbors": [
+      "BEN",
+      "CMR",
+      "NER",
+      "TCD"
+    ],
+    "bbox": [
+      2.6925,
+      4.272499,
+      14.658054,
+      13.891499
+    ],
+    "centroid": [
+      8,
+      10
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "PRK",
+    "name": "North Korea",
+    "aliases": [
+      "Chosŏn Minjujuŭi Inmin Konghwaguk",
+      "Democratic People's Republic of Korea",
+      "DPRK",
+      "Korea, Democratic People's Republic of",
+      "KP",
+      "북조선",
+      "북한",
+      "조선민주주의인민공화국"
+    ],
+    "neighbors": [
+      "CHN",
+      "KOR",
+      "RUS"
+    ],
+    "bbox": [
+      124.322769,
+      37.671379,
+      130.697418,
+      43.008324
+    ],
+    "centroid": [
+      127,
+      40
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Asia",
+    "subregion": "Eastern Asia"
+  },
+  {
+    "iso3": "MKD",
+    "name": "North Macedonia",
+    "aliases": [
+      "Macedonia",
+      "Macedonia, The Former Yugoslav Republic of",
+      "MK",
+      "Republic of North Macedonia",
+      "The former Yugoslav Republic of Macedonia",
+      "Република Северна Македонија"
+    ],
+    "neighbors": [
+      "ALB",
+      "BGR",
+      "GRC",
+      "SRB"
+    ],
+    "bbox": [
+      20.457775,
+      40.855888,
+      23.032776,
+      42.361382
+    ],
+    "centroid": [
+      22,
+      41.83333333
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "NOR",
+    "name": "Norway",
+    "aliases": [
+      "Kingdom of Norway",
+      "Kongeriket Noreg",
+      "Kongeriket Norge",
+      "NO",
+      "Noreg",
+      "Norge"
+    ],
+    "neighbors": [
+      "FIN",
+      "RUS",
+      "SWE"
+    ],
+    "bbox": [
+      4.62,
+      57.98778,
+      31.078053,
+      71.154709
+    ],
+    "centroid": [
+      10,
+      62
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "OMN",
+    "name": "Oman",
+    "aliases": [
+      "OM",
+      "Salṭanat ʻUmān",
+      "Sultanate of Oman"
+    ],
+    "neighbors": [
+      "ARE",
+      "SAU",
+      "YEM"
+    ],
+    "bbox": [
+      51.99929,
+      16.642778,
+      59.847221,
+      26.382389
+    ],
+    "centroid": [
+      57,
+      21
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "PAK",
+    "name": "Pakistan",
+    "aliases": [
+      "Islāmī Jumhūriya'eh Pākistān",
+      "Islamic Republic of Pakistan",
+      "Pākistān",
+      "PK"
+    ],
+    "neighbors": [
+      "AFG",
+      "CHN",
+      "IND",
+      "IRN"
+    ],
+    "bbox": [
+      60.866302,
+      23.68805,
+      77.823929,
+      37.062592
+    ],
+    "centroid": [
+      70,
+      30
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "PLW",
+    "name": "Palau",
+    "aliases": [
+      "Beluu er a Belau",
+      "PW",
+      "Republic of Palau"
+    ],
+    "neighbors": [],
+    "bbox": [
+      132.208313,
+      5.29222,
+      134.658875,
+      7.729444
+    ],
+    "centroid": [
+      134.5,
+      7.5
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Micronesia"
+  },
+  {
+    "iso3": "PAN",
+    "name": "Panama",
+    "aliases": [
+      "PA",
+      "Republic of Panama",
+      "República de Panamá"
+    ],
+    "neighbors": [
+      "COL",
+      "CRI"
+    ],
+    "bbox": [
+      -83.03029,
+      7.206111,
+      -77.19833,
+      9.620277
+    ],
+    "centroid": [
+      -80,
+      9
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "Central America"
+  },
+  {
+    "iso3": "PNG",
+    "name": "Papua New Guinea",
+    "aliases": [
+      "Independen Stet bilong Papua Niugini",
+      "Independent State of Papua New Guinea",
+      "PG"
+    ],
+    "neighbors": [
+      "IDN"
+    ],
+    "bbox": [
+      140.858856,
+      -11.6425,
+      159.523041,
+      -1.098333
+    ],
+    "centroid": [
+      147,
+      -6
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Oceania",
+    "subregion": "Melanesia"
+  },
+  {
+    "iso3": "PRY",
+    "name": "Paraguay",
+    "aliases": [
+      "PY",
+      "Republic of Paraguay",
+      "República del Paraguay",
+      "Tetã Paraguái"
+    ],
+    "neighbors": [
+      "ARG",
+      "BOL",
+      "BRA"
+    ],
+    "bbox": [
+      -62.643768,
+      -27.588337,
+      -54.243896,
+      -19.296669
+    ],
+    "centroid": [
+      -58,
+      -23
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "PER",
+    "name": "Peru",
+    "aliases": [
+      "PE",
+      "Republic of Peru",
+      "República del Perú"
+    ],
+    "neighbors": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "COL",
+      "ECU"
+    ],
+    "bbox": [
+      -81.3564,
+      -18.348545,
+      -68.673904,
+      -0.031389
+    ],
+    "centroid": [
+      -76,
+      -10
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "PHL",
+    "name": "Philippines",
+    "aliases": [
+      "PH",
+      "Republic of the Philippines",
+      "Repúblika ng Pilipinas"
+    ],
+    "neighbors": [],
+    "bbox": [
+      116.949997,
+      4.641388,
+      126.598038,
+      21.11805
+    ],
+    "centroid": [
+      122,
+      13
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "POL",
+    "name": "Poland",
+    "aliases": [
+      "PL",
+      "Republic of Poland",
+      "Rzeczpospolita Polska"
+    ],
+    "neighbors": [
+      "BLR",
+      "CZE",
+      "DEU",
+      "LTU",
+      "RUS",
+      "SVK",
+      "UKR"
+    ],
+    "bbox": [
+      14.145555,
+      49.001938,
+      24.144718,
+      54.836937
+    ],
+    "centroid": [
+      20,
+      52
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Europe",
+    "subregion": "Central Europe"
+  },
+  {
+    "iso3": "PRT",
+    "name": "Portugal",
+    "aliases": [
+      "Portuguesa",
+      "Portuguese Republic",
+      "PT",
+      "República Portuguesa"
+    ],
+    "neighbors": [
+      "ESP"
+    ],
+    "bbox": [
+      -31.29,
+      32.637497,
+      -6.18722,
+      42.15274
+    ],
+    "centroid": [
+      -8,
+      39.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "QAT",
+    "name": "Qatar",
+    "aliases": [
+      "Dawlat Qaṭar",
+      "QA",
+      "State of Qatar"
+    ],
+    "neighbors": [
+      "SAU"
+    ],
+    "bbox": [
+      50.751938,
+      24.556042,
+      51.615829,
+      26.15361
+    ],
+    "centroid": [
+      51.25,
+      25.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "COG",
+    "name": "Republic of the Congo",
+    "aliases": [
+      "CG",
+      "Congo",
+      "Congo Brazzaville",
+      "Congo-Brazzaville"
+    ],
+    "neighbors": [
+      "AGO",
+      "CAF",
+      "CMR",
+      "COD",
+      "GAB"
+    ],
+    "bbox": [
+      11.140661,
+      -5.019444,
+      18.643608,
+      3.713055
+    ],
+    "centroid": [
+      15,
+      -1
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "ROU",
+    "name": "Romania",
+    "aliases": [
+      "RO",
+      "România",
+      "Roumania",
+      "Rumania"
+    ],
+    "neighbors": [
+      "BGR",
+      "HUN",
+      "MDA",
+      "SRB",
+      "UKR"
+    ],
+    "bbox": [
+      20.261024,
+      43.622437,
+      29.672497,
+      48.263885
+    ],
+    "centroid": [
+      25,
+      46
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "RUS",
+    "name": "Russia",
+    "aliases": [
+      "RU",
+      "Russian Federation",
+      "Российская Федерация"
+    ],
+    "neighbors": [
+      "AZE",
+      "BLR",
+      "CHN",
+      "EST",
+      "FIN",
+      "GEO",
+      "KAZ",
+      "LTU",
+      "LVA",
+      "MNG",
+      "NOR",
+      "POL",
+      "PRK",
+      "UKR"
+    ],
+    "bbox": [
+      -180,
+      41.196091,
+      180,
+      81.851929
+    ],
+    "centroid": [
+      100,
+      60
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 14,
+    "region": "Europe",
+    "subregion": "Eastern Europe"
+  },
+  {
+    "iso3": "RWA",
+    "name": "Rwanda",
+    "aliases": [
+      "Republic of Rwanda",
+      "République du Rwanda",
+      "Repubulika y'u Rwanda",
+      "RW"
+    ],
+    "neighbors": [
+      "BDI",
+      "COD",
+      "TZA",
+      "UGA"
+    ],
+    "bbox": [
+      28.853333,
+      -2.826667,
+      30.894444,
+      -1.053889
+    ],
+    "centroid": [
+      30,
+      -2
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "KNA",
+    "name": "Saint Kitts and Nevis",
+    "aliases": [
+      "Federation of Saint Christopher and Nevis",
+      "KN"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -62.863892,
+      17.09166,
+      -62.53417,
+      17.410831
+    ],
+    "centroid": [
+      -62.75,
+      17.33333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "LCA",
+    "name": "Saint Lucia",
+    "aliases": [
+      "LC"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -61.079727,
+      13.709444,
+      -60.878059,
+      14.109444
+    ],
+    "centroid": [
+      -60.96666666,
+      13.88333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "VCT",
+    "name": "Saint Vincent and the Grenadines",
+    "aliases": [
+      "VC"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -61.45417,
+      12.584444,
+      -61.120285,
+      13.384165
+    ],
+    "centroid": [
+      -61.2,
+      13.25
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "WSM",
+    "name": "Samoa",
+    "aliases": [
+      "Independent State of Samoa",
+      "Malo Saʻoloto Tutoʻatasi o Sāmoa",
+      "WS"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -172.780609,
+      -14.057503,
+      -171.42865,
+      -13.460556
+    ],
+    "centroid": [
+      -172.33333333,
+      -13.58333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Polynesia"
+  },
+  {
+    "iso3": "SMR",
+    "name": "San Marino",
+    "aliases": [
+      "Most Serene Republic of San Marino",
+      "Repubblica di San Marino",
+      "Republic of San Marino",
+      "SM"
+    ],
+    "neighbors": [
+      "ITA"
+    ],
+    "bbox": [
+      12.403889,
+      43.895554,
+      12.511665,
+      43.989166
+    ],
+    "centroid": [
+      12.41666666,
+      43.76666666
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "STP",
+    "name": "São Tomé and Príncipe",
+    "aliases": [
+      "Democratic Republic of São Tomé and Príncipe",
+      "República Democrática de São Tomé e Príncipe",
+      "Sao Tome and Principe",
+      "ST"
+    ],
+    "neighbors": [],
+    "bbox": [
+      6.4644440000001,
+      0.01833,
+      7.46417,
+      1.7019440000001
+    ],
+    "centroid": [
+      7,
+      1
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "SAU",
+    "name": "Saudi Arabia",
+    "aliases": [
+      "Al-Mamlakah al-‘Arabiyyah as-Su‘ūdiyyah",
+      "Kingdom of Saudi Arabia",
+      "SA",
+      "Saudi"
+    ],
+    "neighbors": [
+      "ARE",
+      "IRQ",
+      "JOR",
+      "KWT",
+      "OMN",
+      "QAT",
+      "YEM"
+    ],
+    "bbox": [
+      34.492218,
+      15.61694,
+      55.66611,
+      32.154942
+    ],
+    "centroid": [
+      45,
+      25
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "SEN",
+    "name": "Senegal",
+    "aliases": [
+      "Republic of Senegal",
+      "République du Sénégal",
+      "SN"
+    ],
+    "neighbors": [
+      "GIN",
+      "GMB",
+      "GNB",
+      "MLI",
+      "MRT"
+    ],
+    "bbox": [
+      -17.537224,
+      12.301748,
+      -11.3675,
+      16.693054
+    ],
+    "centroid": [
+      -14,
+      14
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "SRB",
+    "name": "Serbia",
+    "aliases": [
+      "Republic of Serbia",
+      "Republika Srbija",
+      "RS",
+      "Srbija",
+      "Република Србија",
+      "Србија"
+    ],
+    "neighbors": [
+      "BGR",
+      "BIH",
+      "HRV",
+      "HUN",
+      "MKD",
+      "MNE",
+      "ROU"
+    ],
+    "bbox": [
+      18.81702,
+      41.855827,
+      23.004997,
+      46.181389
+    ],
+    "centroid": [
+      21,
+      44
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Europe",
+    "subregion": "Southeast Europe"
+  },
+  {
+    "iso3": "SYC",
+    "name": "Seychelles",
+    "aliases": [
+      "Repiblik Sesel",
+      "Republic of Seychelles",
+      "République des Seychelles",
+      "SC"
+    ],
+    "neighbors": [],
+    "bbox": [
+      46.204163,
+      -9.755001,
+      56.28611,
+      -4.280001
+    ],
+    "centroid": [
+      55.66666666,
+      -4.58333333
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "SLE",
+    "name": "Sierra Leone",
+    "aliases": [
+      "Republic of Sierra Leone",
+      "SL"
+    ],
+    "neighbors": [
+      "GIN",
+      "LBR"
+    ],
+    "bbox": [
+      -13.29561,
+      6.92361,
+      -10.26417,
+      9.997499
+    ],
+    "centroid": [
+      -11.5,
+      8.5
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "SGP",
+    "name": "Singapore",
+    "aliases": [
+      "Republic of Singapore",
+      "Republik Singapura",
+      "SG",
+      "Singapura",
+      "新加坡共和国"
+    ],
+    "neighbors": [],
+    "bbox": [
+      103.640808,
+      1.258889,
+      103.998863,
+      1.445277
+    ],
+    "centroid": [
+      103.8,
+      1.36666666
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "SVK",
+    "name": "Slovakia",
+    "aliases": [
+      "SK",
+      "Slovak Republic",
+      "Slovenská republika"
+    ],
+    "neighbors": [
+      "AUT",
+      "CZE",
+      "HUN",
+      "POL",
+      "UKR"
+    ],
+    "bbox": [
+      16.839996,
+      47.737221,
+      22.558052,
+      49.60083
+    ],
+    "centroid": [
+      19.5,
+      48.66666666
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Central Europe"
+  },
+  {
+    "iso3": "SVN",
+    "name": "Slovenia",
+    "aliases": [
+      "Republic of Slovenia",
+      "Republika Slovenija",
+      "SI"
+    ],
+    "neighbors": [
+      "AUT",
+      "HRV",
+      "HUN",
+      "ITA"
+    ],
+    "bbox": [
+      13.383055,
+      45.425819,
+      16.607872,
+      46.876663
+    ],
+    "centroid": [
+      14.81666666,
+      46.11666666
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Central Europe"
+  },
+  {
+    "iso3": "SLB",
+    "name": "Solomon Islands",
+    "aliases": [
+      "SB"
+    ],
+    "neighbors": [],
+    "bbox": [
+      155.507477,
+      -11.845833,
+      167.209961,
+      -5.29306
+    ],
+    "centroid": [
+      159,
+      -8
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Melanesia"
+  },
+  {
+    "iso3": "SOM",
+    "name": "Somalia",
+    "aliases": [
+      "aṣ-Ṣūmāl",
+      "Federal Republic of Somalia",
+      "Jamhuuriyadda Federaalka Soomaaliya",
+      "Jumhūriyyat aṣ-Ṣūmāl al-Fiderāliyya",
+      "SO"
+    ],
+    "neighbors": [
+      "DJI",
+      "ETH",
+      "KEN"
+    ],
+    "bbox": [
+      40.986595,
+      -1.674868,
+      51.412636,
+      11.979166
+    ],
+    "centroid": [
+      49,
+      10
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "ZAF",
+    "name": "South Africa",
+    "aliases": [
+      "Republic of South Africa",
+      "RSA",
+      "Suid-Afrika",
+      "ZA"
+    ],
+    "neighbors": [
+      "BWA",
+      "LSO",
+      "MOZ",
+      "NAM",
+      "SWZ",
+      "ZWE"
+    ],
+    "bbox": [
+      16.48333,
+      -46.96973,
+      37.981667,
+      -22.136391
+    ],
+    "centroid": [
+      24,
+      -29
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Southern Africa"
+  },
+  {
+    "iso3": "KOR",
+    "name": "South Korea",
+    "aliases": [
+      "Korea, Republic of",
+      "KR",
+      "Republic of Korea",
+      "남조선",
+      "남한"
+    ],
+    "neighbors": [
+      "PRK"
+    ],
+    "bbox": [
+      124.609711,
+      33.190269,
+      130.924133,
+      38.625244
+    ],
+    "centroid": [
+      127.5,
+      37
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Asia",
+    "subregion": "Eastern Asia"
+  },
+  {
+    "iso3": "SSD",
+    "name": "South Sudan",
+    "aliases": [
+      "Republic of South Sudan",
+      "SS"
+    ],
+    "neighbors": [
+      "CAF",
+      "COD",
+      "ETH",
+      "KEN",
+      "SDN",
+      "UGA"
+    ],
+    "bbox": [
+      24.121555623000063,
+      3.4902015180000916,
+      35.92083540900012,
+      12.216154684000088
+    ],
+    "centroid": [
+      30,
+      7
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 6,
+    "region": "Africa",
+    "subregion": "Middle Africa"
+  },
+  {
+    "iso3": "ESP",
+    "name": "Spain",
+    "aliases": [
+      "ES",
+      "Kingdom of Spain",
+      "Reino de España"
+    ],
+    "neighbors": [
+      "AND",
+      "FRA",
+      "MAR",
+      "PRT"
+    ],
+    "bbox": [
+      -18.17056,
+      27.637497,
+      4.316944,
+      43.772217
+    ],
+    "centroid": [
+      -4,
+      40
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Europe",
+    "subregion": "Southern Europe"
+  },
+  {
+    "iso3": "LKA",
+    "name": "Sri Lanka",
+    "aliases": [
+      "Democratic Socialist Republic of Sri Lanka",
+      "ilaṅkai",
+      "LK"
+    ],
+    "neighbors": [],
+    "bbox": [
+      79.651932,
+      5.917777,
+      81.89166,
+      9.828331
+    ],
+    "centroid": [
+      81,
+      7
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Asia",
+    "subregion": "Southern Asia"
+  },
+  {
+    "iso3": "SDN",
+    "name": "Sudan",
+    "aliases": [
+      "Jumhūrīyat as-Sūdān",
+      "Republic of the Sudan",
+      "SD"
+    ],
+    "neighbors": [
+      "CAF",
+      "EGY",
+      "ERI",
+      "ETH",
+      "LBY",
+      "SSD",
+      "TCD"
+    ],
+    "bbox": [
+      21.809448690000124,
+      8.681641744000046,
+      38.603851759000065,
+      22.226964823000102
+    ],
+    "centroid": [
+      30,
+      15
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Africa",
+    "subregion": "Northern Africa"
+  },
+  {
+    "iso3": "SUR",
+    "name": "Suriname",
+    "aliases": [
+      "Republic of Suriname",
+      "Republiek Suriname",
+      "Sarnam",
+      "SR",
+      "Sranangron"
+    ],
+    "neighbors": [
+      "BRA",
+      "GUY"
+    ],
+    "bbox": [
+      -58.071396,
+      1.835556,
+      -53.984169,
+      6.003055
+    ],
+    "centroid": [
+      -56,
+      4
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "SWE",
+    "name": "Sweden",
+    "aliases": [
+      "Kingdom of Sweden",
+      "Konungariket Sverige",
+      "SE"
+    ],
+    "neighbors": [
+      "FIN",
+      "NOR"
+    ],
+    "bbox": [
+      11.106943,
+      55.339165,
+      24.16861,
+      69.0603
+    ],
+    "centroid": [
+      15,
+      62
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "CHE",
+    "name": "Switzerland",
+    "aliases": [
+      "CH",
+      "Schweiz",
+      "Suisse",
+      "Svizra",
+      "Svizzera",
+      "Swiss Confederation"
+    ],
+    "neighbors": [
+      "AUT",
+      "DEU",
+      "FRA",
+      "ITA",
+      "LIE"
+    ],
+    "bbox": [
+      5.96611,
+      45.829437,
+      10.488913,
+      47.806938
+    ],
+    "centroid": [
+      8,
+      47
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Europe",
+    "subregion": "Western Europe"
+  },
+  {
+    "iso3": "SYR",
+    "name": "Syria",
+    "aliases": [
+      "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah",
+      "SY",
+      "Syrian Arab Republic"
+    ],
+    "neighbors": [
+      "IRQ",
+      "ISR",
+      "JOR",
+      "LBN",
+      "TUR"
+    ],
+    "bbox": [
+      35.614464,
+      32.313606,
+      42.379166,
+      37.290543
+    ],
+    "centroid": [
+      38,
+      35
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "TJK",
+    "name": "Tajikistan",
+    "aliases": [
+      "Çumhuriyi Toçikiston",
+      "Republic of Tajikistan",
+      "TJ",
+      "Toçikiston",
+      "Ҷумҳурии Тоҷикистон"
+    ],
+    "neighbors": [
+      "AFG",
+      "CHN",
+      "KGZ",
+      "UZB"
+    ],
+    "bbox": [
+      67.3647,
+      36.671844,
+      75.187485,
+      41.050224
+    ],
+    "centroid": [
+      71,
+      39
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Central Asia"
+  },
+  {
+    "iso3": "TZA",
+    "name": "Tanzania",
+    "aliases": [
+      "Jamhuri ya Muungano wa Tanzania",
+      "Tanzania, United Republic of",
+      "TZ",
+      "United Republic of Tanzania"
+    ],
+    "neighbors": [
+      "BDI",
+      "COD",
+      "KEN",
+      "MOZ",
+      "MWI",
+      "RWA",
+      "UGA",
+      "ZMB"
+    ],
+    "bbox": [
+      29.340832,
+      -11.74083,
+      40.436813,
+      -0.99722
+    ],
+    "centroid": [
+      35,
+      -6
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 8,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "THA",
+    "name": "Thailand",
+    "aliases": [
+      "Kingdom of Thailand",
+      "Prathet",
+      "Ratcha Anachak Thai",
+      "TH",
+      "Thai",
+      "ราชอาณาจักรไทย"
+    ],
+    "neighbors": [
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS"
+    ],
+    "bbox": [
+      97.345261,
+      5.63111,
+      105.639427,
+      20.455273
+    ],
+    "centroid": [
+      100,
+      15
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "TLS",
+    "name": "Timor-Leste",
+    "aliases": [
+      "Democratic Republic of Timor-Leste",
+      "East Timor",
+      "República Democrática de Timor-Leste",
+      "Repúblika Demokrátika Timór-Leste",
+      "Timor",
+      "Timór Lorosa'e",
+      "Timor Lorosae",
+      "TL"
+    ],
+    "neighbors": [
+      "IDN"
+    ],
+    "bbox": [
+      124.04616116617,
+      -9.4633795565334,
+      127.308594,
+      -8.32444
+    ],
+    "centroid": [
+      125.91666666,
+      -8.83333333
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "TGO",
+    "name": "Togo",
+    "aliases": [
+      "République Togolaise",
+      "TG",
+      "Togolese",
+      "Togolese Republic"
+    ],
+    "neighbors": [
+      "BEN",
+      "BFA",
+      "GHA"
+    ],
+    "bbox": [
+      -0.149762,
+      6.100546,
+      1.799327,
+      11.13854
+    ],
+    "centroid": [
+      1.16666666,
+      8
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Africa",
+    "subregion": "Western Africa"
+  },
+  {
+    "iso3": "TON",
+    "name": "Tonga",
+    "aliases": [
+      "Kingdom of Tonga",
+      "TO"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -175.684723,
+      -21.45417,
+      -173.906158,
+      -15.56028
+    ],
+    "centroid": [
+      -175,
+      -20
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Polynesia"
+  },
+  {
+    "iso3": "TTO",
+    "name": "Trinidad and Tobago",
+    "aliases": [
+      "Republic of Trinidad and Tobago",
+      "TT"
+    ],
+    "neighbors": [],
+    "bbox": [
+      -61.92445,
+      10.037498,
+      -60.520561,
+      11.346109
+    ],
+    "centroid": [
+      -61,
+      11
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Americas",
+    "subregion": "Caribbean"
+  },
+  {
+    "iso3": "TUN",
+    "name": "Tunisia",
+    "aliases": [
+      "al-Jumhūriyyah at-Tūnisiyyah",
+      "Republic of Tunisia",
+      "TN",
+      "Tunisian Republic"
+    ],
+    "neighbors": [
+      "DZA",
+      "LBY"
+    ],
+    "bbox": [
+      7.491666,
+      30.23439,
+      11.58333,
+      37.539444
+    ],
+    "centroid": [
+      9,
+      34
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Africa",
+    "subregion": "Northern Africa"
+  },
+  {
+    "iso3": "TUR",
+    "name": "Türkiye",
+    "aliases": [
+      "Republic of Turkey",
+      "Republic of Türkiye",
+      "TR",
+      "Turkiye",
+      "Türkiye Cumhuriyeti"
+    ],
+    "neighbors": [
+      "ARM",
+      "AZE",
+      "BGR",
+      "GEO",
+      "GRC",
+      "IRN",
+      "IRQ",
+      "SYR"
+    ],
+    "bbox": [
+      25.663883,
+      35.817497,
+      44.822762,
+      42.109993
+    ],
+    "centroid": [
+      35,
+      39
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 8,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "TKM",
+    "name": "Turkmenistan",
+    "aliases": [
+      "TM"
+    ],
+    "neighbors": [
+      "AFG",
+      "IRN",
+      "KAZ",
+      "UZB"
+    ],
+    "bbox": [
+      52.440071,
+      35.141663,
+      66.672485,
+      42.797775
+    ],
+    "centroid": [
+      60,
+      40
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Asia",
+    "subregion": "Central Asia"
+  },
+  {
+    "iso3": "TUV",
+    "name": "Tuvalu",
+    "aliases": [
+      "TV"
+    ],
+    "neighbors": [],
+    "bbox": [
+      176.066376,
+      -8.561292,
+      179.232285,
+      -5.65778
+    ],
+    "centroid": [
+      178,
+      -8
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Polynesia"
+  },
+  {
+    "iso3": "UGA",
+    "name": "Uganda",
+    "aliases": [
+      "Jamhuri ya Uganda",
+      "Republic of Uganda",
+      "UG"
+    ],
+    "neighbors": [
+      "COD",
+      "KEN",
+      "RWA",
+      "SSD",
+      "TZA"
+    ],
+    "bbox": [
+      29.570831,
+      -1.47611,
+      35.00972,
+      4.222777
+    ],
+    "centroid": [
+      32,
+      1
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "UKR",
+    "name": "Ukraine",
+    "aliases": [
+      "UA",
+      "Ukrayina"
+    ],
+    "neighbors": [
+      "BLR",
+      "HUN",
+      "MDA",
+      "POL",
+      "ROU",
+      "RUS",
+      "SVK"
+    ],
+    "bbox": [
+      22.15144,
+      44.37915,
+      40.179718,
+      52.379715
+    ],
+    "centroid": [
+      32,
+      49
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 7,
+    "region": "Europe",
+    "subregion": "Eastern Europe"
+  },
+  {
+    "iso3": "ARE",
+    "name": "United Arab Emirates",
+    "aliases": [
+      "AE",
+      "Emirates",
+      "UAE"
+    ],
+    "neighbors": [
+      "OMN",
+      "SAU"
+    ],
+    "bbox": [
+      51.583328,
+      22.633329,
+      56.38166,
+      26.08416
+    ],
+    "centroid": [
+      54,
+      24
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "GBR",
+    "name": "United Kingdom",
+    "aliases": [
+      "Britain",
+      "GB",
+      "Great Britain",
+      "U.K.",
+      "UK",
+      "United Kingdom of Great Britain and Northern Ireland"
+    ],
+    "neighbors": [
+      "IRL"
+    ],
+    "bbox": [
+      -8.62139,
+      49.911659,
+      1.74944,
+      60.844444
+    ],
+    "centroid": [
+      -2,
+      54
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 1,
+    "region": "Europe",
+    "subregion": "Northern Europe"
+  },
+  {
+    "iso3": "USA",
+    "name": "United States",
+    "aliases": [
+      "America",
+      "U.S.",
+      "United States of America",
+      "US",
+      "USA"
+    ],
+    "neighbors": [
+      "CAN",
+      "MEX"
+    ],
+    "bbox": [
+      -179.141998,
+      18.923882,
+      179.777466,
+      71.365814
+    ],
+    "centroid": [
+      -97,
+      38
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "North America"
+  },
+  {
+    "iso3": "URY",
+    "name": "Uruguay",
+    "aliases": [
+      "Oriental Republic of Uruguay",
+      "República Oriental del Uruguay",
+      "UY"
+    ],
+    "neighbors": [
+      "ARG",
+      "BRA"
+    ],
+    "bbox": [
+      -58.438614,
+      -34.948891,
+      -53.093056,
+      -30.096668
+    ],
+    "centroid": [
+      -56,
+      -33
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "UZB",
+    "name": "Uzbekistan",
+    "aliases": [
+      "O‘zbekiston Respublikasi",
+      "Republic of Uzbekistan",
+      "UZ",
+      "Ўзбекистон Республикаси"
+    ],
+    "neighbors": [
+      "AFG",
+      "KAZ",
+      "KGZ",
+      "TJK",
+      "TKM"
+    ],
+    "bbox": [
+      55.99749,
+      37.183876,
+      73.173035,
+      45.571106
+    ],
+    "centroid": [
+      64,
+      41
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 5,
+    "region": "Asia",
+    "subregion": "Central Asia"
+  },
+  {
+    "iso3": "VUT",
+    "name": "Vanuatu",
+    "aliases": [
+      "Republic of Vanuatu",
+      "République de Vanuatu",
+      "Ripablik blong Vanuatu",
+      "VU"
+    ],
+    "neighbors": [],
+    "bbox": [
+      166.516663,
+      -20.25417,
+      170.235229,
+      -13.070555
+    ],
+    "centroid": [
+      167,
+      -16
+    ],
+    "difficultyBand": "easy",
+    "playable": false,
+    "neighborCount": 0,
+    "region": "Oceania",
+    "subregion": "Melanesia"
+  },
+  {
+    "iso3": "VEN",
+    "name": "Venezuela",
+    "aliases": [
+      "Bolivarian Republic of Venezuela",
+      "República Bolivariana de Venezuela",
+      "VE",
+      "Venezuela, Bolivarian Republic of"
+    ],
+    "neighbors": [
+      "BRA",
+      "COL",
+      "GUY"
+    ],
+    "bbox": [
+      -73.37807,
+      0.648611,
+      -59.801392,
+      12.198889
+    ],
+    "centroid": [
+      -66,
+      8
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Americas",
+    "subregion": "South America"
+  },
+  {
+    "iso3": "VNM",
+    "name": "Vietnam",
+    "aliases": [
+      "Cộng hòa Xã hội chủ nghĩa Việt Nam",
+      "Socialist Republic of Vietnam",
+      "Viet Nam",
+      "VN"
+    ],
+    "neighbors": [
+      "CHN",
+      "KHM",
+      "LAO"
+    ],
+    "bbox": [
+      102.140747,
+      8.558609,
+      109.466377,
+      23.334721
+    ],
+    "centroid": [
+      107.83333333,
+      16.16666666
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 3,
+    "region": "Asia",
+    "subregion": "South-Eastern Asia"
+  },
+  {
+    "iso3": "YEM",
+    "name": "Yemen",
+    "aliases": [
+      "al-Jumhūriyyah al-Yamaniyyah",
+      "Republic of Yemen",
+      "YE",
+      "Yemeni Republic"
+    ],
+    "neighbors": [
+      "OMN",
+      "SAU"
+    ],
+    "bbox": [
+      42.555832,
+      12.10611,
+      54.476944,
+      18.999344
+    ],
+    "centroid": [
+      48,
+      15
+    ],
+    "difficultyBand": "easy",
+    "playable": true,
+    "neighborCount": 2,
+    "region": "Asia",
+    "subregion": "Western Asia"
+  },
+  {
+    "iso3": "ZMB",
+    "name": "Zambia",
+    "aliases": [
+      "Republic of Zambia",
+      "ZM"
+    ],
+    "neighbors": [
+      "AGO",
+      "BWA",
+      "COD",
+      "MOZ",
+      "MWI",
+      "NAM",
+      "TZA",
+      "ZWE"
+    ],
+    "bbox": [
+      21.996387,
+      -18.076126,
+      33.702278,
+      -8.191668
+    ],
+    "centroid": [
+      30,
+      -15
+    ],
+    "difficultyBand": "hard",
+    "playable": true,
+    "neighborCount": 8,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  },
+  {
+    "iso3": "ZWE",
+    "name": "Zimbabwe",
+    "aliases": [
+      "Republic of Zimbabwe",
+      "ZW"
+    ],
+    "neighbors": [
+      "BWA",
+      "MOZ",
+      "ZAF",
+      "ZMB"
+    ],
+    "bbox": [
+      25.236664,
+      -22.414764,
+      33.073051,
+      -15.616112
+    ],
+    "centroid": [
+      30,
+      -20
+    ],
+    "difficultyBand": "medium",
+    "playable": true,
+    "neighborCount": 4,
+    "region": "Africa",
+    "subregion": "Eastern Africa"
+  }
+]
