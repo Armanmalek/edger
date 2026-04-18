@@ -14,6 +14,13 @@ Original prompt: Build Edges as a static-first Next.js App Router daily geograph
 - Reworked the map camera to bias toward the active country rather than the raw neighbor bounds midpoint, which produces a more puzzle-like framing.
 - Moved the end-to-end harness off `next dev` and onto the built static output served from `out/`, which removed flaky hydration timing and made screenshot review match the shipped experience.
 - Removed the Framer Motion inline aside animation after it caused a client/server hydration warning during browser verification.
+- Applied a full dark-mode visual pass: green space-atlas background, darker panels, brighter off-white typography, and a darker grey map with stronger border visibility.
+- Increased the round-complete handoff delay from 1350ms to 3000ms so users can actually see the connection animation before the next country loads.
+- Tightened the map stroke treatment and active-country highlight to make geographic separations more readable within the darker palette.
+- Renamed the Vitest config to `vitest.config.mts` after the runner started failing to load the ESM config under the current toolchain.
+- Simplified the map camera behavior to a fixed non-interactive view centered on the active country, with enough zoom-out to keep surrounding geography visible.
+- Reworked the map renderer into separate base-fill, highlight, and top-boundary passes so every country outline remains visible while the active country and found neighbors render clearly on top.
+- Updated the Playwright harness to capture the hydrated map state before taking the start screenshot, which made screenshot review reflect the real rendered game state.
 
 ## TODO
 

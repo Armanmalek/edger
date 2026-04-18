@@ -118,9 +118,9 @@ async function main() {
     });
 
     await page.goto(`${BASE_URL}/?date=${DATE_ID}`, { waitUntil: "networkidle" });
+    let state = await waitForRenderableState(page);
     await page.screenshot({ path: path.join(TEST_RESULTS_DIR, "edges-start.png"), fullPage: true });
 
-    let state = await waitForRenderableState(page);
     await submitGuess(page, state.expectedNeighbors[0]);
     await page.reload({ waitUntil: "networkidle" });
     state = await waitForRenderableState(page);
