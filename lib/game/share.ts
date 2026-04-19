@@ -1,7 +1,21 @@
 import type { CountryRecord, RoundProgress, StoredProgress } from "@/lib/types";
+import { hr } from "framer-motion/client";
 
 const ROUND_SYMBOL = "●";
 const EMPTY_SYMBOL = "○";
+
+function getRoundAssistEmoji(round: RoundProgress): string {
+  if (round.skippedAt) {
+    return "❌";
+  }
+
+  if (round.hintCount > 0) {
+    return "💡";
+  }
+
+  return "";
+}
+
 
 export function formatRoundShare(
   round: RoundProgress,
@@ -12,7 +26,9 @@ export function formatRoundShare(
   const filled = ROUND_SYMBOL.repeat(solved);
   const empty = EMPTY_SYMBOL.repeat(Math.max(0, neighborTotal - solved));
   const missSuffix = round.misses > 0 ? ` +${round.misses}` : "";
-  return `${filled}${empty}${missSuffix}`;
+  const assistEmoji = getRoundAssistEmoji(round);
+  const prefix = assistEmoji ? `${assistEmoji} ` : "";
+  return `${prefix}${filled}${empty}${missSuffix}`;
 }
 
 export function formatShareText(
@@ -22,6 +38,8 @@ export function formatShareText(
   const lines = progress.rounds.map((round, index) => {
     return `R${index + 1} ${formatRoundShare(round, countriesByIso)}`;
   });
-  const streakLine = `Streak ${progress.streak}`;
-  return [`Edges ${progress.puzzleId}`, ...lines, streakLine].join("\n");
+
+
+  return [`Edges ${progress.puzzleId}`, ...lines, "https://guesstheyneighbour.com " 
+  ].join("\n");
 }

@@ -20,8 +20,42 @@ export function createEmptyRounds(puzzle: DailyPuzzle): RoundProgress[] {
     found: [],
     wrong: [],
     misses: 0,
+    hintCount: 0,
     solvedAt: null,
+    skippedAt: null,
   }));
+}
+
+function normalizeRound(
+  round: Partial<RoundProgress> | undefined,
+  countryIso: string,
+): RoundProgress {
+  return {
+    countryIso,
+    found: Array.isArray(round?.found) ? round!.found : [],
+    wrong: Array.isArray(round?.wrong) ? round!.wrong : [],
+    misses: typeof round?.misses === "number" ? round.misses : 0,
+    hintCount: typeof round?.hintCount === "number" ? round.hintCount : 0,
+    solvedAt: typeof round?.solvedAt === "string" ? round.solvedAt : null,
+    skippedAt: typeof round?.skippedAt === "string" ? round.skippedAt : null,
+  };
+}
+
+function normalizeStoredProgress(
+  progress: Partial<StoredProgress>,
+  puzzle: DailyPuzzle,
+): StoredProgress {
+  return {
+    puzzleId: typeof progress.puzzleId === "string" ? progress.puzzleId : puzzle.id,
+    rounds: puzzle.countries.map((countryIso, index) =>
+      normalizeRound(progress.rounds?.[index], countryIso),
+    ),
+    completed: Boolean(progress.completed),
+    streak: typeof progress.streak === "number" ? progress.streak : 0,
+    maxStreak: typeof progress.maxStreak === "number" ? progress.maxStreak : 0,
+    sharedAt: typeof progress.sharedAt === "string" ? progress.sharedAt : null,
+    completedAt: typeof progress.completedAt === "string" ? progress.completedAt : null,
+  };
 }
 
 export function createEmptyProgress(
@@ -55,14 +89,16 @@ export function hydrateProgress(
   }
 
   try {
-    const parsed = JSON.parse(rawValue) as StoredProgress;
+    const parsed = JSON.parse(rawValue) as Partial<StoredProgress>;
     if (parsed.puzzleId === puzzle.id) {
-      return parsed;
+      return normalizeStoredProgress(parsed, puzzle);
     }
 
     const carriedStreak =
-      parsed.completed && isPreviousUtcDay(parsed.puzzleId, puzzle.id)
-        ? parsed.streak
+      parsed.completed &&
+      typeof parsed.puzzleId === "string" &&
+      isPreviousUtcDay(parsed.puzzleId, puzzle.id)
+        ? (parsed.streak ?? 0)
         : 0;
 
     return createEmptyProgress(

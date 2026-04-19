@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { countriesByIso, countryRecords, dailyPuzzles, aliasToIso } from "@/lib/data";
 import { applyGuessToProgress, classifyGuess } from "@/lib/game/guess";
@@ -13,7 +13,7 @@ import {
   STORAGE_KEY,
 } from "@/lib/game/puzzle";
 import { formatShareText } from "@/lib/game/share";
-import type { RenderGameState, StoredProgress } from "@/lib/types";
+import type { CountryRecord, RenderGameState, RoundProgress, StoredProgress } from "@/lib/types";
 import { EdgesMap } from "@/components/EdgesMap";
 import styles from "./edges-game.module.css";
 
@@ -25,6 +25,20 @@ declare global {
 }
 
 const TRANSITION_MS = 3000;
+const CELEBRATION_STEP_MS = 280;
+const CELEBRATION_FINAL_HOLD_MS = 900;
+
+interface CelebrationState {
+  roundIndex: number;
+  priorFound: string[];
+  finalIso: string;
+  step: number;
+}
+
+interface HintEntry {
+  iso3: string;
+  text: string;
+}
 
 function formatPuzzleLabel(puzzleId: string) {
   const date = new Date(`${puzzleId}T00:00:00.000Z`);
@@ -79,12 +93,62 @@ function getRoundMessage(resultKind: string) {
   }
 }
 
+function getLetterCount(name: string) {
+  return name.replace(/[^A-Za-z]/g, "").length;
+}
+
+function getCompassDirection(
+  from: CountryRecord["centroid"],
+  to: CountryRecord["centroid"],
+): string {
+  const [fromLon, fromLat] = from;
+  const [toLon, toLat] = to;
+  const deltaX = toLon - fromLon;
+  const deltaY = toLat - fromLat;
+  const angle = (Math.atan2(deltaX, deltaY) * 180) / Math.PI;
+  const normalized = (angle + 360) % 360;
+  const directions = [
+    "north",
+    "north-east",
+    "east",
+    "south-east",
+    "south",
+    "south-west",
+    "west",
+    "north-west",
+  ];
+
+  return directions[Math.round(normalized / 45) % directions.length] ?? "north";
+}
+
+function getHintEntries(
+  country: CountryRecord,
+  round: RoundProgress,
+  countries: Record<string, CountryRecord>,
+): HintEntry[] {
+  return country.neighbors.map((neighborIso, index) => {
+    const neighbor = countries[neighborIso];
+    const letterCount = getLetterCount(neighbor.name);
+    const direction = getCompassDirection(country.centroid, neighbor.centroid);
+    const firstLetter = neighbor.name[0]?.toUpperCase() ?? "?";
+    const clueNumber = index + 1;
+    const foundState = round.found.includes(neighborIso) ? " Already found." : "";
+
+    return {
+      iso3: neighborIso,
+      text: `Hint ${clueNumber}: ${direction} of ${country.name}, starts with ${firstLetter}, ${letterCount} letters.${foundState}`,
+    };
+  });
+}
+
 function finalizeCompletion(progress: StoredProgress): StoredProgress {
   if (progress.completed) {
     return progress;
   }
 
-  const nextStreak = progress.streak + 1;
+  const nextStreak = progress.rounds.some((round) => round.skippedAt)
+    ? progress.streak
+    : progress.streak + 1;
   return {
     ...progress,
     completed: true,
@@ -103,6 +167,8 @@ function getRenderState(
   progress: StoredProgress,
   roundIndex: number,
   message: string | null,
+  visibleFoundNeighbors: string[],
+  celebrationStep: number | null,
 ): RenderGameState {
   const activeRound = progress.rounds[Math.min(roundIndex, progress.rounds.length - 1)];
   const activeCountry = countriesByIso[activeRound.countryIso];
@@ -113,11 +179,15 @@ function getRenderState(
     activeCountryIso: activeCountry.iso3,
     expectedNeighbors: activeCountry.neighbors.map((iso3) => countriesByIso[iso3].name),
     foundNeighbors: activeRound.found.map((iso3) => countriesByIso[iso3].name),
+    visibleFoundNeighbors: visibleFoundNeighbors.map((iso3) => countriesByIso[iso3].name),
     misses: activeRound.misses,
+    hintCount: activeRound.hintCount,
+    skipped: Boolean(activeRound.skippedAt),
     completed: progress.completed,
     streak: progress.streak,
     maxStreak: progress.maxStreak,
     message,
+    celebrationStep,
   };
 }
 
@@ -133,16 +203,71 @@ export function EdgesGame() {
   const [inputValue, setInputValue] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [shareState, setShareState] = useState<"idle" | "copied" | "failed">("idle");
-  const [celebrationRound, setCelebrationRound] = useState<number | null>(null);
+  const [celebrationState, setCelebrationState] = useState<CelebrationState | null>(null);
   const [highlightedSuggestion, setHighlightedSuggestion] = useState(0);
 
   const activeRound = progress.rounds[currentRoundIndex];
   const activeCountry = countriesByIso[activeRound.countryIso];
-  const remainingCount = activeCountry.neighbors.length - activeRound.found.length;
-  const suggestions = getMatchingSuggestions(inputValue).filter(
-    (country) => country.iso3 !== activeCountry.iso3 && !activeRound.found.includes(country.iso3),
+  const hintEntries = useMemo(
+    () => getHintEntries(activeCountry, activeRound, countriesByIso),
+    [activeCountry, activeRound],
   );
-  const isCelebrating = celebrationRound === currentRoundIndex;
+  const revealedHints = hintEntries.slice(0, activeRound.hintCount);
+  const hasRemainingHints = activeRound.hintCount < hintEntries.length;
+  const suggestions = useMemo(
+    () =>
+      getMatchingSuggestions(inputValue).filter(
+        (country) => country.iso3 !== activeCountry.iso3 && !activeRound.found.includes(country.iso3),
+      ),
+    [activeCountry.iso3, activeRound.found, inputValue],
+  );
+  const isCelebrating = celebrationState?.roundIndex === currentRoundIndex;
+  const visibleFoundNeighbors = useMemo(() => {
+    if (!isCelebrating || !celebrationState) {
+      return activeRound.found;
+    }
+
+    const finalIsVisible = celebrationState.step > celebrationState.priorFound.length;
+    return finalIsVisible
+      ? [...celebrationState.priorFound, celebrationState.finalIso]
+      : celebrationState.priorFound;
+  }, [activeRound.found, celebrationState, isCelebrating]);
+  const completeNeighbors = useMemo(() => {
+    if (!isCelebrating || !celebrationState) {
+      return [];
+    }
+
+    const completedPrior = celebrationState.priorFound.slice(
+      0,
+      Math.min(celebrationState.step, celebrationState.priorFound.length),
+    );
+    const finalNeighbor =
+      celebrationState.step > celebrationState.priorFound.length ? [celebrationState.finalIso] : [];
+
+    return [...completedPrior, ...finalNeighbor];
+  }, [celebrationState, isCelebrating]);
+  const correctNeighbors = useMemo(() => {
+    if (!isCelebrating || !celebrationState) {
+      return activeRound.found;
+    }
+
+    return celebrationState.priorFound.slice(
+      Math.min(celebrationState.step, celebrationState.priorFound.length),
+    );
+  }, [activeRound.found, celebrationState, isCelebrating]);
+  const celebratingIso = useMemo(() => {
+    if (!isCelebrating || !celebrationState || celebrationState.step === 0) {
+      return null;
+    }
+
+    if (celebrationState.step <= celebrationState.priorFound.length) {
+      return celebrationState.priorFound[celebrationState.step - 1] ?? null;
+    }
+
+    return celebrationState.finalIso;
+  }, [celebrationState, isCelebrating]);
+  const remainingCount = activeCountry.neighbors.length - activeRound.found.length;
+  const showCompletePanel = progress.completed && !isCelebrating;
 
   useEffect(() => {
     const storedValue =
@@ -153,7 +278,7 @@ export function EdgesGame() {
     setInputValue("");
     setMessage(null);
     setShareState("idle");
-    setCelebrationRound(null);
+    setCelebrationState(null);
     setHighlightedSuggestion(0);
     setHydrated(true);
   }, [puzzle.id]);
@@ -176,7 +301,15 @@ export function EdgesGame() {
     }
 
     window.render_game_to_text = () =>
-      JSON.stringify(getRenderState(progress, currentRoundIndex, message));
+      JSON.stringify(
+        getRenderState(
+          progress,
+          currentRoundIndex,
+          message,
+          visibleFoundNeighbors,
+          celebrationState?.step ?? null,
+        ),
+      );
     window.advanceTime = (ms: number) =>
       new Promise((resolve) => {
         window.setTimeout(resolve, ms);
@@ -186,16 +319,35 @@ export function EdgesGame() {
       delete window.render_game_to_text;
       delete window.advanceTime;
     };
-  }, [currentRoundIndex, message, progress]);
+  }, [celebrationState?.step, currentRoundIndex, message, progress, visibleFoundNeighbors]);
 
   useEffect(() => {
-    if (celebrationRound === null) {
+    if (!celebrationState) {
       return;
     }
 
+    const maxStep = celebrationState.priorFound.length + 1;
+
+    if (celebrationState.step < maxStep) {
+      const timer = window.setTimeout(() => {
+        setCelebrationState((current) =>
+          current && current.roundIndex === celebrationState.roundIndex
+            ? {
+                ...current,
+                step: Math.min(current.step + 1, maxStep),
+              }
+            : current,
+        );
+      }, CELEBRATION_STEP_MS);
+
+      return () => window.clearTimeout(timer);
+    }
+
+    const elapsedSequenceMs = maxStep * CELEBRATION_STEP_MS;
+    const holdMs = Math.max(CELEBRATION_FINAL_HOLD_MS, TRANSITION_MS - elapsedSequenceMs);
     const timer = window.setTimeout(() => {
       if (progress.completed) {
-        setCelebrationRound(null);
+        setCelebrationState(null);
         return;
       }
 
@@ -203,12 +355,12 @@ export function EdgesGame() {
       if (nextRound >= 0) {
         setCurrentRoundIndex(nextRound);
       }
-      setCelebrationRound(null);
+      setCelebrationState(null);
       setMessage("Next border set.");
-    }, TRANSITION_MS);
+    }, holdMs);
 
     return () => window.clearTimeout(timer);
-  }, [celebrationRound, progress]);
+  }, [celebrationState, progress]);
 
   async function handleShare() {
     try {
@@ -224,6 +376,67 @@ export function EdgesGame() {
       setShareState("failed");
       setMessage("Clipboard was unavailable.");
     }
+  }
+
+  function applyRoundUpdate(nextRound: RoundProgress, messageText: string) {
+    const nextProgress = {
+      ...progress,
+      rounds: progress.rounds.map((round, index) => (index === currentRoundIndex ? nextRound : round)),
+    };
+    const finalProgress =
+      currentRoundIndex === nextProgress.rounds.length - 1
+        ? finalizeCompletion(nextProgress)
+        : nextProgress;
+
+    setProgress(finalProgress);
+    setInputValue("");
+    setHighlightedSuggestion(0);
+    setMessage(messageText);
+
+    if (currentRoundIndex < finalProgress.rounds.length - 1) {
+      const nextRoundIndex = getActiveRoundIndex(finalProgress);
+      if (nextRoundIndex >= 0) {
+        setCurrentRoundIndex(nextRoundIndex);
+      }
+    }
+  }
+
+  function handleHint() {
+    if (progress.completed || isCelebrating || !hasRemainingHints) {
+      return;
+    }
+
+    const nextHintCount = activeRound.hintCount + 1;
+    const nextRound = {
+      ...activeRound,
+      hintCount: nextHintCount,
+    };
+    setProgress({
+      ...progress,
+      rounds: progress.rounds.map((round, index) =>
+        index === currentRoundIndex ? nextRound : round,
+      ),
+    });
+    setMessage(hintEntries[nextHintCount - 1]?.text ?? "No more hints for this round.");
+  }
+
+  function handleSkip() {
+    if (progress.completed || isCelebrating || activeRound.solvedAt) {
+      return;
+    }
+
+    const now = new Date().toISOString();
+    applyRoundUpdate(
+      {
+        ...activeRound,
+        found: [...activeCountry.neighbors],
+        solvedAt: now,
+        skippedAt: now,
+      },
+      currentRoundIndex === progress.rounds.length - 1
+        ? "Round skipped. Daily route closed."
+        : "Round skipped. Next border set.",
+    );
   }
 
   function submitGuess(rawGuess: string) {
@@ -253,8 +466,14 @@ export function EdgesGame() {
         currentRoundIndex === nextProgress.rounds.length - 1
           ? finalizeCompletion(nextProgress)
           : nextProgress;
+      const orderedFound = nextRound.found;
       setProgress(finalProgress);
-      setCelebrationRound(currentRoundIndex);
+      setCelebrationState({
+        roundIndex: currentRoundIndex,
+        priorFound: orderedFound.slice(0, -1),
+        finalIso: orderedFound[orderedFound.length - 1]!,
+        step: 0,
+      });
       setInputValue("");
       setHighlightedSuggestion(0);
       setMessage(currentRoundIndex === nextProgress.rounds.length - 1 ? "Solved." : "Round cleared.");
@@ -311,7 +530,7 @@ export function EdgesGame() {
   const routeStatus = progress.rounds.map((round, index) => ({
     label: index + 1,
     complete: Boolean(round.solvedAt),
-    active: index === currentRoundIndex && !progress.completed,
+    active: index === currentRoundIndex && (!progress.completed || isCelebrating),
   }));
 
   return (
@@ -332,8 +551,9 @@ export function EdgesGame() {
           <div className={styles.mapSurface}>
             <EdgesMap
               activeCountryIso={activeCountry.iso3}
-              foundNeighbors={activeRound.found}
-              celebration={isCelebrating}
+              correctNeighbors={correctNeighbors}
+              completeNeighbors={completeNeighbors}
+              celebratingIso={celebratingIso}
             />
           </div>
 
@@ -376,41 +596,72 @@ export function EdgesGame() {
               </div>
             </dl>
 
-            {!progress.completed ? (
+            {!showCompletePanel ? (
               <form className={styles.guessForm} onSubmit={handleSubmit}>
                 <label className={styles.label} htmlFor="country-guess">
                   Enter a neighboring country
                 </label>
-                <input
-                  id="country-guess"
-                  autoComplete="off"
-                  className={styles.input}
-                  data-testid="country-input"
-                  onChange={(event) => setInputValue(event.target.value)}
-                  onKeyDown={handleInputKeyDown}
-                  placeholder="Type a country"
-                  value={inputValue}
-                />
-                {suggestions.length > 0 ? (
-                  <div className={styles.suggestionTray} data-testid="suggestion-list">
-                    {suggestions.map((country, index) => (
-                      <button
-                        key={country.iso3}
-                        className={styles.suggestion}
-                        data-active={index === highlightedSuggestion}
-                        onClick={() => handleSuggestionPick(country.name)}
-                        onMouseEnter={() => setHighlightedSuggestion(index)}
-                        type="button"
-                      >
-                        <span>{country.name}</span>
-                        <span className={styles.suggestionMeta}>{country.region}</span>
-                      </button>
-                    ))}
+                <div className={styles.inputStack}>
+                  <input
+                    id="country-guess"
+                    autoComplete="off"
+                    className={styles.input}
+                    data-testid="country-input"
+                    disabled={progress.completed || isCelebrating}
+                    onChange={(event) => setInputValue(event.target.value)}
+                    onKeyDown={handleInputKeyDown}
+                    placeholder="Type a country"
+                    value={inputValue}
+                  />
+                  <div className={styles.suggestionViewport}>
+                    {suggestions.length > 0 ? (
+                      <div className={styles.suggestionTray} data-testid="suggestion-list">
+                        {suggestions.map((country, index) => (
+                          <button
+                            key={country.iso3}
+                            className={styles.suggestion}
+                            data-active={index === highlightedSuggestion}
+                            disabled={progress.completed || isCelebrating}
+                            onClick={() => handleSuggestionPick(country.name)}
+                            onMouseEnter={() => setHighlightedSuggestion(index)}
+                            type="button"
+                          >
+                            <span>{country.name}</span>
+                            <span className={styles.suggestionMeta}>{country.region}</span>
+                          </button>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
-                ) : null}
-                <button className={styles.submit} data-testid="submit-guess" type="submit">
+                </div>
+                <button
+                  className={styles.submit}
+                  data-testid="submit-guess"
+                  disabled={progress.completed || isCelebrating}
+                  type="submit"
+                >
                   Submit
                 </button>
+                <div className={styles.actionRow}>
+                  <button
+                    className={styles.secondaryAction}
+                    data-testid="hint-button"
+                    disabled={progress.completed || isCelebrating || !hasRemainingHints}
+                    onClick={handleHint}
+                    type="button"
+                  >
+                    {hasRemainingHints ? "Use hint" : "No hints left"}
+                  </button>
+                  <button
+                    className={styles.skipAction}
+                    data-testid="skip-button"
+                    disabled={progress.completed || isCelebrating}
+                    onClick={handleSkip}
+                    type="button"
+                  >
+                    Skip round
+                  </button>
+                </div>
               </form>
             ) : (
               <div className={styles.completePanel}>
@@ -443,7 +694,21 @@ export function EdgesGame() {
               </ul>
             </section>
 
-            {progress.completed ? (
+            {!showCompletePanel && revealedHints.length > 0 ? (
+              <section className={styles.hintSection}>
+                <div className={styles.foundHeader}>
+                  <h3>Hints used</h3>
+                  <span>{revealedHints.length}</span>
+                </div>
+                <ul className={styles.hintList} data-testid="hint-list">
+                  {revealedHints.map((hint) => (
+                    <li key={hint.iso3}>{hint.text}</li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {showCompletePanel ? (
               <section className={styles.summary}>
                 <h3>Today’s result</h3>
                 <pre className={styles.shareBlock}>{formatShareText(progress, countriesByIso)}</pre>

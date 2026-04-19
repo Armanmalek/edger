@@ -57,9 +57,7 @@ export function applyGuessToProgress(
     }
 
     if (guess.kind === "correct") {
-      const nextFound = [...round.found, guess.iso3].sort((left, right) =>
-        countriesByIso[left].name.localeCompare(countriesByIso[right].name),
-      );
+      const nextFound = [...round.found, guess.iso3];
       const solved = nextFound.length === countriesByIso[round.countryIso].neighbors.length;
       return {
         ...round,

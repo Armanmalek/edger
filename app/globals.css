@@ -54,9 +54,9 @@ a {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 18%, rgba(174, 255, 211, 0.08), transparent 25%),
-    radial-gradient(circle at 16% 88%, rgba(82, 181, 157, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(9, 15, 18, 0.98), rgba(5, 9, 11, 0.98));
+    radial-gradient(circle at 52% 18%, rgba(248, 252, 247, 0.035), transparent 24%),
+    radial-gradient(circle at 18% 82%, rgba(188, 197, 202, 0.03), transparent 28%),
+    linear-gradient(180deg, rgba(32, 39, 43, 0.99), rgba(21, 27, 31, 0.99));
 }
 
 .edges-map svg {

@@ -67,8 +67,8 @@
   min-height: 62vh;
   border-radius: 34px;
   background:
-    radial-gradient(circle at top left, rgba(130, 255, 183, 0.08), transparent 22%),
-    linear-gradient(180deg, rgba(13, 21, 23, 0.98), rgba(4, 8, 10, 0.98));
+    radial-gradient(circle at top left, rgba(248, 252, 247, 0.03), transparent 22%),
+    linear-gradient(180deg, rgba(30, 37, 41, 0.98), rgba(18, 24, 27, 0.98));
 }
 
 .controlRail {
@@ -162,6 +162,17 @@
   gap: 10px;
 }
 
+.actionRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto);
+  gap: 10px;
+}
+
+.inputStack {
+  display: grid;
+  gap: 8px;
+}
+
 .input {
   width: 100%;
   border: 1px solid rgba(184, 205, 194, 0.14);
@@ -176,10 +187,23 @@
   color: rgba(201, 214, 207, 0.45);
 }
 
+.input:disabled,
+.suggestion:disabled,
+.submit:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.suggestionViewport {
+  height: 212px;
+  overflow: hidden;
+}
+
 .suggestionTray {
   display: grid;
   gap: 6px;
-  margin-top: -2px;
+  max-height: 100%;
+  overflow: auto;
 }
 
 .suggestion {
@@ -223,6 +247,35 @@
   filter: brightness(1.06);
 }
 
+.secondaryAction,
+.skipAction {
+  border-radius: 999px;
+  padding: 12px 16px;
+  border: 1px solid rgba(184, 205, 194, 0.16);
+  background: rgba(242, 248, 242, 0.045);
+  color: var(--ink);
+}
+
+.secondaryAction {
+  text-align: left;
+}
+
+.skipAction {
+  border-color: rgba(242, 155, 149, 0.24);
+  color: #f0b1aa;
+}
+
+.secondaryAction:hover,
+.skipAction:hover {
+  filter: brightness(1.05);
+}
+
+.secondaryAction:disabled,
+.skipAction:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
 .feedback {
   min-height: 1.3rem;
   margin: 0;
@@ -234,6 +287,7 @@
 }
 
 .foundSection,
+.hintSection,
 .summary,
 .completePanel {
   display: grid;
@@ -269,6 +323,23 @@
   border-radius: 999px;
   background: rgba(142, 247, 143, 0.12);
   border: 1px solid rgba(142, 247, 143, 0.14);
+}
+
+.hintList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.hintList li {
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(242, 248, 242, 0.045);
+  border: 1px solid rgba(184, 205, 194, 0.1);
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 .completeTitle {

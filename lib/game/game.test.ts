@@ -38,6 +38,34 @@ describe("guess classification", () => {
     expect(duplicateWrong.kind).toBe("duplicate_wrong");
   });
 
+  it("preserves the order correct neighbors were guessed", () => {
+    const puzzle = getPuzzleById(dailyPuzzles, "2026-04-03");
+    const progress = createEmptyProgress(puzzle);
+    const round = progress.rounds[0];
+    const country = countriesByIso[round.countryIso];
+    const [firstGuess, secondGuess] = [...country.neighbors].reverse();
+
+    const afterFirst = applyGuessToProgress(
+      progress,
+      0,
+      classifyGuess(countriesByIso[firstGuess].name, round, countriesByIso, aliasToIso),
+      countriesByIso,
+    );
+    const afterSecond = applyGuessToProgress(
+      afterFirst,
+      0,
+      classifyGuess(
+        countriesByIso[secondGuess].name,
+        afterFirst.rounds[0],
+        countriesByIso,
+        aliasToIso,
+      ),
+      countriesByIso,
+    );
+
+    expect(afterSecond.rounds[0].found).toEqual([firstGuess, secondGuess]);
+  });
+
   it("completes a round only when all neighbors are found", () => {
     const puzzle = getPuzzleById(dailyPuzzles, "2026-04-03");
     const progress = createEmptyProgress(puzzle);
@@ -96,13 +124,43 @@ describe("puzzle hydration and sharing", () => {
     expect(hydrated.maxStreak).toBe(5);
   });
 
+  it("migrates older saved progress to include hint and skip defaults", () => {
+    const puzzle = getPuzzleById(dailyPuzzles, "2026-04-04");
+    const legacyProgress = {
+      puzzleId: puzzle.id,
+      rounds: puzzle.countries.map((countryIso) => ({
+        countryIso,
+        found: [],
+        wrong: [],
+        misses: 0,
+        solvedAt: null,
+      })),
+      completed: false,
+      streak: 0,
+      maxStreak: 0,
+      sharedAt: null,
+      completedAt: null,
+    };
+
+    const hydrated = hydrateProgress(JSON.stringify(legacyProgress), puzzle);
+
+    expect(hydrated.rounds.every((round) => round.hintCount === 0)).toBe(true);
+    expect(hydrated.rounds.every((round) => round.skippedAt === null)).toBe(true);
+  });
+
   it("formats spoiler-free share text", () => {
     const puzzle = getPuzzleById(dailyPuzzles, "2026-04-03");
     const progress = createEmptyProgress(puzzle);
+    progress.rounds[0].hintCount = 1;
+    progress.rounds[1].found = [...countriesByIso[progress.rounds[1].countryIso].neighbors];
+    progress.rounds[1].skippedAt = "2026-04-03T01:00:00.000Z";
+    progress.rounds[1].solvedAt = "2026-04-03T01:00:00.000Z";
     const share = formatShareText(progress, countriesByIso);
 
     expect(share).toContain("Edges 2026-04-03");
     expect(share).not.toContain(countriesByIso[puzzle.countries[0]].name);
     expect(share).toContain("R1");
+    expect(share).toContain("💡");
+    expect(share).toContain("❌");
   });
 });

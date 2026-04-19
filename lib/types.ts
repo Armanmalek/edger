@@ -25,7 +25,9 @@ export interface RoundProgress {
   found: string[];
   wrong: string[];
   misses: number;
+  hintCount: number;
   solvedAt: string | null;
+  skippedAt: string | null;
 }
 
 export interface StoredProgress {
@@ -55,9 +57,13 @@ export interface RenderGameState {
   activeCountryIso: string;
   expectedNeighbors: string[];
   foundNeighbors: string[];
+  visibleFoundNeighbors: string[];
   misses: number;
+  hintCount: number;
+  skipped: boolean;
   completed: boolean;
   streak: number;
   maxStreak: number;
   message: string | null;
+  celebrationStep: number | null;
 }

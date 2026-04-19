@@ -21,8 +21,18 @@ Original prompt: Build Edges as a static-first Next.js App Router daily geograph
 - Simplified the map camera behavior to a fixed non-interactive view centered on the active country, with enough zoom-out to keep surrounding geography visible.
 - Reworked the map renderer into separate base-fill, highlight, and top-boundary passes so every country outline remains visible while the active country and found neighbors render clearly on top.
 - Updated the Playwright harness to capture the hydrated map state before taking the start screenshot, which made screenshot review reflect the real rendered game state.
+- Reworked solved-round highlighting into a staged recolor sequence: correct neighbors now stay in guess order, previously found neighbors darken one-by-one during completion, and the final guessed neighbor renders directly into the complete color instead of using the intermediate fill.
+- Removed the old line-based celebration overlay from the map and replaced it with per-country SVG lift/slam animation on the recolor step, with the control rail held in gameplay mode until the final celebration finishes.
+- Extended the render/debug state and Playwright harness so browser verification can stop during the recolor sequence and capture a dedicated celebration screenshot.
+- Verified the new celebration visually from production screenshots (`edges-start.png`, `edges-round-one-celebration.png`, `edges-finished.png`, and `edges-mobile-next-day.png`).
+- Attempted to run the packaged `develop-web-game` Playwright client, but the shipped script currently fails in this environment because it is an ESM file published as `.js` outside the repo and cannot resolve the local `playwright` dependency from its install path.
+- Added per-round hint metadata and skip metadata with storage migration so older saved progress upgrades cleanly.
+- Implemented a deterministic hint system in the control rail plus a skip-round action; hints now reveal ordered clue cards for the current country and skipped rounds auto-complete without celebration.
+- Updated share output so hinted rounds are prefixed with `💡` and skipped rounds are prefixed with `❌`, and adjusted daily completion so skipped runs do not increment streaks.
+- Extended the production Playwright flow to use a hint on round 1, skip round 2, solve round 3, and verify the final summary contains both `💡` and `❌`.
 
 ## TODO
 
 - Consider stronger map polish in a future pass: richer connection animations, better neighbor color contrast, and possibly per-country viewport tuning for tiny states.
 - Consider moving `countries.json` and `daily-puzzles.json` to on-demand fetches too if bundle size becomes a concern beyond the current optimized build.
+- If the shared `develop-web-game` client needs to be used directly next time, either fix the skill packaging or add a repo-local wrapper so it can resolve ESM and the workspace `playwright` install cleanly.
