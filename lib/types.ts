@@ -66,4 +66,5 @@ export interface RenderGameState {
   maxStreak: number;
   message: string | null;
   celebrationStep: number | null;
+  awaitingContinue: boolean;
 }

@@ -173,6 +173,18 @@
   gap: 8px;
 }
 
+.inputShell {
+  display: grid;
+  gap: 8px;
+}
+
+.inputShell[data-tone="danger"] .input {
+  border-color: rgba(242, 155, 149, 0.58);
+  box-shadow:
+    inset 0 0 0 1px rgba(68, 16, 14, 0.34),
+    0 0 0 1px rgba(242, 155, 149, 0.08);
+}
+
 .input {
   width: 100%;
   border: 1px solid rgba(184, 205, 194, 0.14);
@@ -185,6 +197,18 @@
 
 .input::placeholder {
   color: rgba(201, 214, 207, 0.45);
+}
+
+.inputSubtext {
+  min-height: 1.15rem;
+  margin: 0;
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.inputSubtext[data-tone="danger"] {
+  color: #f0a49d;
 }
 
 .input:disabled,
@@ -348,6 +372,34 @@
   letter-spacing: -0.02em;
 }
 
+.roundSummaryPanel {
+  display: grid;
+  gap: 18px;
+}
+
+.summaryCopy {
+  display: grid;
+  gap: 14px;
+}
+
+.summaryBlock,
+.summaryStats {
+  display: grid;
+  gap: 10px;
+}
+
+.summaryLabel {
+  color: var(--muted);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.summaryStats strong {
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+}
+
 .shareBlock {
   margin: 0;
   padding: 18px;
@@ -368,6 +420,33 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes input-jitter {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  18% {
+    transform: translateX(-6px);
+  }
+
+  36% {
+    transform: translateX(5px);
+  }
+
+  54% {
+    transform: translateX(-4px);
+  }
+
+  72% {
+    transform: translateX(3px);
+  }
+}
+
+.inputShellJitter {
+  animation: input-jitter 340ms ease;
 }
 
 @media (max-width: 980px) {
@@ -408,7 +487,8 @@
     transition: none !important;
   }
 
-  .controlRail {
+  .controlRail,
+  .inputShellJitter {
     animation: none;
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { countriesByIso, countryRecords, dailyPuzzles, aliasToIso } from "@/lib/data";
 import { applyGuessToProgress, classifyGuess } from "@/lib/game/guess";
@@ -24,9 +24,8 @@ declare global {
   }
 }
 
-const TRANSITION_MS = 3000;
-const CELEBRATION_STEP_MS = 280;
-const CELEBRATION_FINAL_HOLD_MS = 900;
+const CELEBRATION_STEP_MS = 750;
+const CELEBRATION_FINAL_HOLD_MS = 500;
 
 interface CelebrationState {
   roundIndex: number;
@@ -169,6 +168,7 @@ function getRenderState(
   message: string | null,
   visibleFoundNeighbors: string[],
   celebrationStep: number | null,
+  awaitingContinue: boolean,
 ): RenderGameState {
   const activeRound = progress.rounds[Math.min(roundIndex, progress.rounds.length - 1)];
   const activeCountry = countriesByIso[activeRound.countryIso];
@@ -188,6 +188,7 @@ function getRenderState(
     maxStreak: progress.maxStreak,
     message,
     celebrationStep,
+    awaitingContinue,
   };
 }
 
@@ -205,6 +206,10 @@ export function EdgesGame() {
   const [shareState, setShareState] = useState<"idle" | "copied" | "failed">("idle");
   const [celebrationState, setCelebrationState] = useState<CelebrationState | null>(null);
   const [highlightedSuggestion, setHighlightedSuggestion] = useState(0);
+  const [awaitingContinueRound, setAwaitingContinueRound] = useState<number | null>(null);
+  const [inputStatus, setInputStatus] = useState<string | null>(null);
+  const [inputTone, setInputTone] = useState<"neutral" | "danger">("neutral");
+  const inputShellRef = useRef<HTMLDivElement | null>(null);
 
   const activeRound = progress.rounds[currentRoundIndex];
   const activeCountry = countriesByIso[activeRound.countryIso];
@@ -268,6 +273,14 @@ export function EdgesGame() {
   }, [celebrationState, isCelebrating]);
   const remainingCount = activeCountry.neighbors.length - activeRound.found.length;
   const showCompletePanel = progress.completed && !isCelebrating;
+  const showRoundSummary = awaitingContinueRound === currentRoundIndex && !isCelebrating;
+  const summaryNeighbors = useMemo(
+    () =>
+      [...activeCountry.neighbors]
+        .map((iso3) => countriesByIso[iso3].name)
+        .sort((left, right) => left.localeCompare(right)),
+    [activeCountry.neighbors],
+  );
 
   useEffect(() => {
     const storedValue =
@@ -280,12 +293,24 @@ export function EdgesGame() {
     setShareState("idle");
     setCelebrationState(null);
     setHighlightedSuggestion(0);
+    setAwaitingContinueRound(null);
+    setInputStatus(null);
+    setInputTone("neutral");
     setHydrated(true);
   }, [puzzle.id]);
 
   useEffect(() => {
     setHighlightedSuggestion(0);
   }, [inputValue, currentRoundIndex]);
+
+  useEffect(() => {
+    if (!showRoundSummary) {
+      return;
+    }
+
+    setInputStatus(null);
+    setInputTone("neutral");
+  }, [showRoundSummary]);
 
   useEffect(() => {
     if (!hydrated || typeof window === "undefined") {
@@ -308,6 +333,7 @@ export function EdgesGame() {
           message,
           visibleFoundNeighbors,
           celebrationState?.step ?? null,
+          showRoundSummary,
         ),
       );
     window.advanceTime = (ms: number) =>
@@ -319,7 +345,14 @@ export function EdgesGame() {
       delete window.render_game_to_text;
       delete window.advanceTime;
     };
-  }, [celebrationState?.step, currentRoundIndex, message, progress, visibleFoundNeighbors]);
+  }, [
+    celebrationState?.step,
+    currentRoundIndex,
+    message,
+    progress,
+    showRoundSummary,
+    visibleFoundNeighbors,
+  ]);
 
   useEffect(() => {
     if (!celebrationState) {
@@ -343,21 +376,16 @@ export function EdgesGame() {
       return () => window.clearTimeout(timer);
     }
 
-    const elapsedSequenceMs = maxStep * CELEBRATION_STEP_MS;
-    const holdMs = Math.max(CELEBRATION_FINAL_HOLD_MS, TRANSITION_MS - elapsedSequenceMs);
     const timer = window.setTimeout(() => {
       if (progress.completed) {
         setCelebrationState(null);
         return;
       }
 
-      const nextRound = getActiveRoundIndex(progress);
-      if (nextRound >= 0) {
-        setCurrentRoundIndex(nextRound);
-      }
       setCelebrationState(null);
-      setMessage("Next border set.");
-    }, holdMs);
+      setAwaitingContinueRound(celebrationState.roundIndex);
+      setMessage(null);
+    }, CELEBRATION_FINAL_HOLD_MS);
 
     return () => window.clearTimeout(timer);
   }, [celebrationState, progress]);
@@ -417,7 +445,8 @@ export function EdgesGame() {
         index === currentRoundIndex ? nextRound : round,
       ),
     });
-    setMessage(hintEntries[nextHintCount - 1]?.text ?? "No more hints for this round.");
+    setInputStatus(hintEntries[nextHintCount - 1]?.text ?? "No more hints for this round.");
+    setInputTone("neutral");
   }
 
   function handleSkip() {
@@ -439,13 +468,43 @@ export function EdgesGame() {
     );
   }
 
+  function triggerInputJitter() {
+    if (!inputShellRef.current) {
+      return;
+    }
+
+    inputShellRef.current.classList.remove(styles.inputShellJitter);
+    void inputShellRef.current.offsetWidth;
+    inputShellRef.current.classList.add(styles.inputShellJitter);
+  }
+
+  function handleContinueToNextRound() {
+    const nextRound = getActiveRoundIndex(progress);
+    if (nextRound >= 0) {
+      setCurrentRoundIndex(nextRound);
+    }
+    setAwaitingContinueRound(null);
+    setInputValue("");
+    setInputStatus(null);
+    setInputTone("neutral");
+    setHighlightedSuggestion(0);
+    setMessage("Next border set.");
+  }
+
   function submitGuess(rawGuess: string) {
-    if (!rawGuess.trim() || progress.completed || isCelebrating) {
+    if (!rawGuess.trim() || progress.completed || isCelebrating || showRoundSummary) {
       return;
     }
 
     const result = classifyGuess(rawGuess, activeRound, countriesByIso, aliasToIso);
-    setMessage(getRoundMessage(result.kind));
+    const nextMessage = getRoundMessage(result.kind);
+    setMessage(nextMessage);
+    setInputStatus(nextMessage);
+    setInputTone(result.kind === "wrong" || result.kind === "invalid_country" ? "danger" : "neutral");
+
+    if (result.kind === "wrong" || result.kind === "invalid_country") {
+      triggerInputJitter();
+    }
 
     if (result.kind === "invalid_country") {
       return;
@@ -474,8 +533,10 @@ export function EdgesGame() {
         finalIso: orderedFound[orderedFound.length - 1]!,
         step: 0,
       });
+      setAwaitingContinueRound(null);
       setInputValue("");
       setHighlightedSuggestion(0);
+      setInputStatus(null);
       setMessage(currentRoundIndex === nextProgress.rounds.length - 1 ? "Solved." : "Round cleared.");
       return;
     }
@@ -596,23 +657,28 @@ export function EdgesGame() {
               </div>
             </dl>
 
-            {!showCompletePanel ? (
+            {!showCompletePanel && !showRoundSummary ? (
               <form className={styles.guessForm} onSubmit={handleSubmit}>
                 <label className={styles.label} htmlFor="country-guess">
                   Enter a neighboring country
                 </label>
-                <div className={styles.inputStack}>
-                  <input
-                    id="country-guess"
-                    autoComplete="off"
-                    className={styles.input}
-                    data-testid="country-input"
-                    disabled={progress.completed || isCelebrating}
-                    onChange={(event) => setInputValue(event.target.value)}
-                    onKeyDown={handleInputKeyDown}
-                    placeholder="Type a country"
-                    value={inputValue}
-                  />
+                <div className={styles.inputStack} ref={inputShellRef}>
+                  <div className={styles.inputShell} data-tone={inputTone}>
+                    <input
+                      id="country-guess"
+                      autoComplete="off"
+                      className={styles.input}
+                      data-testid="country-input"
+                      disabled={progress.completed || isCelebrating}
+                      onChange={(event) => setInputValue(event.target.value)}
+                      onKeyDown={handleInputKeyDown}
+                      placeholder="Type a country"
+                      value={inputValue}
+                    />
+                    <p className={styles.inputSubtext} data-tone={inputTone} data-testid="input-subtext">
+                      {inputStatus ?? " "}
+                    </p>
+                  </div>
                   <div className={styles.suggestionViewport}>
                     {suggestions.length > 0 ? (
                       <div className={styles.suggestionTray} data-testid="suggestion-list">
@@ -663,6 +729,34 @@ export function EdgesGame() {
                   </button>
                 </div>
               </form>
+            ) : showRoundSummary ? (
+              <div className={styles.roundSummaryPanel} data-testid="round-summary-panel">
+                <p className={styles.completeTitle}>
+                  You correctly guessed all the neighbours for {activeCountry.name}
+                </p>
+                <div className={styles.summaryCopy}>
+                  <div className={styles.summaryBlock}>
+                    <span className={styles.summaryLabel}>Neighbours</span>
+                    <ul className={styles.foundList}>
+                      {summaryNeighbors.map((neighbor) => (
+                        <li key={neighbor}>{neighbor}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={styles.summaryStats}>
+                    <span className={styles.summaryLabel}>Hints used</span>
+                    <strong>{activeRound.hintCount}</strong>
+                  </div>
+                </div>
+                <button
+                  className={styles.submit}
+                  data-testid="continue-next-round"
+                  onClick={handleContinueToNextRound}
+                  type="button"
+                >
+                  Continue to Next Round
+                </button>
+              </div>
             ) : (
               <div className={styles.completePanel}>
                 <p className={styles.completeTitle}>Daily route complete.</p>
@@ -673,39 +767,32 @@ export function EdgesGame() {
               </div>
             )}
 
-            <p
-              aria-live="polite"
-              className={styles.feedback}
-              data-tone={message === "Not a land border." ? "danger" : "neutral"}
-              data-testid="feedback"
-            >
-              {message ?? " "}
-            </p>
-
-            <section className={styles.foundSection}>
-              <div className={styles.foundHeader}>
-                <h3>Found borders</h3>
-                <span>{activeRound.found.length}</span>
-              </div>
-              <ul className={styles.foundList} data-testid="found-list">
-                {activeRound.found.map((iso3) => (
-                  <li key={iso3}>{countriesByIso[iso3].name}</li>
-                ))}
-              </ul>
-            </section>
-
-            {!showCompletePanel && revealedHints.length > 0 ? (
-              <section className={styles.hintSection}>
+            {!showRoundSummary ? (
+              <section className={styles.foundSection}>
                 <div className={styles.foundHeader}>
-                  <h3>Hints used</h3>
-                  <span>{revealedHints.length}</span>
+                  <h3>Found borders</h3>
+                  <span>{activeRound.found.length}</span>
                 </div>
-                <ul className={styles.hintList} data-testid="hint-list">
-                  {revealedHints.map((hint) => (
-                    <li key={hint.iso3}>{hint.text}</li>
+                <ul className={styles.foundList} data-testid="found-list">
+                  {activeRound.found.map((iso3) => (
+                    <li key={iso3}>{countriesByIso[iso3].name}</li>
                   ))}
                 </ul>
               </section>
+            ) : null}
+
+            {!showCompletePanel && !showRoundSummary && revealedHints.length > 0 ? (
+              <section className={styles.hintSection}>
+              <div className={styles.foundHeader}>
+                <h3>Hints used</h3>
+                <span>{revealedHints.length}</span>
+              </div>
+              <ul className={styles.hintList} data-testid="hint-list">
+                {revealedHints.map((hint) => (
+                  <li key={hint.iso3}>{hint.text}</li>
+                ))}
+              </ul>
+            </section>
             ) : null}
 
             {showCompletePanel ? (

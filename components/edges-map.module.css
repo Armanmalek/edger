@@ -29,11 +29,11 @@
 }
 
 .countryLift {
-  animation: country-lift-slam 460ms cubic-bezier(0.16, 0.88, 0.18, 1.08);
+  animation: country-lift-slam 750ms cubic-bezier(0.16, 0.88, 0.18, 1.08);
 }
 
 .countryBorderLift {
-  animation: country-border-lift-slam 460ms cubic-bezier(0.16, 0.88, 0.18, 1.08);
+  animation: country-border-lift-slam 750ms cubic-bezier(0.16, 0.88, 0.18, 1.08);
 }
 
 @keyframes country-lift-slam {
