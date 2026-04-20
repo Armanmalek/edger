@@ -1,13 +1,11 @@
-import { cp, mkdir, mkdtemp, rm } from "node:fs/promises";
+import { mkdir } from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
-import os from "node:os";
 import { chromium } from "playwright";
 import countries from "../generated/countries.json";
 
 const PORT = 3100;
-const BASE_PATH = process.env.GITHUB_PAGES === "1" ? "/edger" : "";
-const BASE_URL = `http://127.0.0.1:${PORT}${BASE_PATH}`;
+const BASE_URL = `http://127.0.0.1:${PORT}`;
 const DATE_ID = "2026-04-03";
 const NEXT_DATE_ID = "2026-04-04";
 const TEST_RESULTS_DIR = path.join(process.cwd(), "test-results");
@@ -26,6 +24,7 @@ interface RenderState {
   completed: boolean;
   message: string | null;
   celebrationStep: number | null;
+  awaitingContinue: boolean;
 }
 
 async function waitForServer(url: string) {
@@ -82,6 +81,34 @@ async function waitForCelebrationStep(
   throw new Error("Timed out waiting for celebration state");
 }
 
+async function waitForShareButton(page: import("playwright").Page) {
+  const deadline = Date.now() + 20_000;
+
+  while (Date.now() < deadline) {
+    if (await page.getByTestId("share-button").isVisible().catch(() => false)) {
+      return;
+    }
+
+    await page.waitForTimeout(250);
+  }
+
+  throw new Error("Timed out waiting for share button");
+}
+
+async function waitForContinueButton(page: import("playwright").Page) {
+  const deadline = Date.now() + 20_000;
+
+  while (Date.now() < deadline) {
+    if (await page.getByTestId("continue-next-round").isVisible().catch(() => false)) {
+      return;
+    }
+
+    await page.waitForTimeout(250);
+  }
+
+  throw new Error("Timed out waiting for round summary continue button");
+}
+
 function chooseWrongGuess(state: RenderState) {
   const disallowed = new Set([...state.expectedNeighbors, state.activeCountry]);
   const country = (countries as { name: string }[]).find((entry) => !disallowed.has(entry.name));
@@ -109,15 +136,7 @@ async function solveCurrentRound(page: import("playwright").Page) {
 
 async function main() {
   await mkdir(TEST_RESULTS_DIR, { recursive: true });
-  const serveRoot =
-    BASE_PATH.length > 0
-      ? await (async () => {
-          const tempRoot = await mkdtemp(path.join(os.tmpdir(), "edges-pages-"));
-          const targetDir = path.join(tempRoot, BASE_PATH.slice(1));
-          await cp(path.join(process.cwd(), "out"), targetDir, { recursive: true });
-          return tempRoot;
-        })()
-      : path.join(process.cwd(), "out");
+  const serveRoot = path.join(process.cwd(), "out");
 
   const server = spawn(
     "python3",
@@ -163,7 +182,7 @@ async function main() {
 
     const wrongGuess = chooseWrongGuess(state);
     await submitGuess(page, wrongGuess);
-    await page.getByTestId("feedback").waitFor({ state: "visible" });
+    await page.getByTestId("input-subtext").waitFor({ state: "visible" });
 
     state = await getRenderState(page);
     if (state.misses !== 1) {
@@ -190,7 +209,12 @@ async function main() {
       path: path.join(TEST_RESULTS_DIR, "edges-round-one-complete.png"),
       fullPage: true,
     });
-    await page.evaluate((ms) => window.advanceTime?.(ms), 3200);
+    await waitForContinueButton(page);
+    state = await getRenderState(page);
+    if (!state.awaitingContinue) {
+      throw new Error("Expected round summary state after non-final celebration");
+    }
+    await page.getByTestId("continue-next-round").click();
 
     while (true) {
       state = await waitForRenderableState(page);
@@ -233,7 +257,7 @@ async function main() {
       }
     }
 
-    await page.waitForTimeout(1500);
+    await waitForShareButton(page);
     await page.screenshot({ path: path.join(TEST_RESULTS_DIR, "edges-finished.png"), fullPage: true });
 
     if (!(await page.getByTestId("share-button").isVisible())) {
@@ -268,9 +292,6 @@ async function main() {
     }
   } finally {
     server.kill("SIGTERM");
-    if (BASE_PATH.length > 0) {
-      await rm(serveRoot, { recursive: true, force: true });
-    }
   }
 }
 

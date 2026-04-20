@@ -30,9 +30,14 @@ Original prompt: Build Edges as a static-first Next.js App Router daily geograph
 - Implemented a deterministic hint system in the control rail plus a skip-round action; hints now reveal ordered clue cards for the current country and skipped rounds auto-complete without celebration.
 - Updated share output so hinted rounds are prefixed with `💡` and skipped rounds are prefixed with `❌`, and adjusted daily completion so skipped runs do not increment streaks.
 - Extended the production Playwright flow to use a hint on round 1, skip round 2, solve round 3, and verify the final summary contains both `💡` and `❌`.
+- Added a GitHub Actions Pages deployment path from `master`, preserving the custom domain through `public/CNAME` and disabling Jekyll through `public/.nojekyll`.
+- Simplified the static export configuration for the custom-domain root so built assets resolve from `/_next/...` instead of `/edger/_next/...`.
+- Updated the production Playwright flow to verify inline input validation and the solved-round summary/continue state after non-final celebrations.
+- Verified the deployment migration with `npm run test:unit`, `npm run build:pages`, generated asset-path checks, and `npm run test:e2e`; inspected the new Playwright screenshots after the production flow passed.
 
 ## TODO
 
 - Consider stronger map polish in a future pass: richer connection animations, better neighbor color contrast, and possibly per-country viewport tuning for tiny states.
 - Consider moving `countries.json` and `daily-puzzles.json` to on-demand fetches too if bundle size becomes a concern beyond the current optimized build.
 - If the shared `develop-web-game` client needs to be used directly next time, either fix the skill packaging or add a repo-local wrapper so it can resolve ESM and the workspace `playwright` install cleanly.
+- After merging this deployment change, set GitHub Pages in the repository settings to deploy from GitHub Actions rather than the `gh-pages` branch.

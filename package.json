@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npm run generate:data && next dev",
     "build": "npm run generate:data && next build",
+    "build:pages": "npm run build",
     "start": "next start",
     "lint": "next lint",
     "generate:data": "node --import tsx scripts/generate-game-data.ts",
