@@ -40,6 +40,6 @@ export function formatShareText(
   });
 
 
-  return [`Edges ${progress.puzzleId}`, ...lines, "https://guesstheyneighbour.com " 
+  return [`Edges ${progress.puzzleId}`, ...lines, "https://guessthyneighbour.com " 
   ].join("\n");
 }
